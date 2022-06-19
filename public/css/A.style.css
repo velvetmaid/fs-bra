@@ -318,7 +318,7 @@
     line-height: 1.2; }
   
   h1, .h1 {
-    font-size: 72px; }
+    font-size: auto; }
   
   h2, .h2 {
     font-size: 2rem; }
@@ -5060,14 +5060,15 @@
   .popover-body {
     padding: 0.5rem 0.75rem;
     color: #212529; }
+
   
   .carousel {
-    z-index: -1;
+    position: static;
     height: 550px;
     /* against padding */
     margin-left: -15px;
     margin-right: -15px;
-    background-size: cover; }
+    background-size: 100% 100%; }
   
   .carousel.pointer-event {
     -ms-touch-action: pan-y;
@@ -5258,14 +5259,18 @@
     text-align: center; }
 
     .main_slider_content {
-      width: 60%;
-      text-align: center;
-    z-index: 6;
+      width: 90%;
     }
 
   .fill_height {
     height: 100%;
+    margin: 0; /* don't delete */
     }
+  
+  .teks-title {
+    width: 35%;
+    float: left;
+  }
 
   .main_content {
     -ms-flex-preferred-size: 0;
@@ -5273,6 +5278,7 @@
     -ms-flex-positive: 1;
     flex-grow: 1;
     max-width: 100%;
+    margin-left: 100px;
     }
     
   
@@ -6358,7 +6364,7 @@
     .align-self-xl-center {
       -ms-flex-item-align: center !important;
       -ms-grid-row-align: center !important;
-      align-self: center !important; }
+      align-self: center !important; }oat-right
     .align-self-xl-baseline {
       -ms-flex-item-align: baseline !important;
       align-self: baseline !important; }
@@ -6371,7 +6377,11 @@
     float: left !important; }
   
   .float-right {
-    float: right !important; }
+    width: 35%; }
+
+    @media (max-width: 576px) {
+      .float-right {
+        width: 100px; } }
   
   .float-none {
     float: none !important; }
@@ -8156,7 +8166,8 @@
   
   .ftco-section {
     background-color: #fff;
-    padding-top: 5em; }
+    padding-top: 5em;
+    position: relative; }
   
   .ftco-no-pt {
     padding-top: 0; }
@@ -8282,6 +8293,7 @@
   
   .navbar-brand {
     color: #000;
+    margin-left: 16px;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 20px;

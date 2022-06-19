@@ -1,4 +1,4 @@
-<section class="ftco-section shadow rounded">
+<section class="ftco-section shadow rounded ">
     <div class="container">
     </div>
     <div class="container-fluid px-md-5">
