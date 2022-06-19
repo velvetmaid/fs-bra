@@ -318,7 +318,7 @@
     line-height: 1.2; }
   
   h1, .h1 {
-    font-size: 2.5rem; }
+    font-size: 72px; }
   
   h2, .h2 {
     font-size: 2rem; }
@@ -461,19 +461,19 @@
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto; }
+    }
     @media (min-width: 576px) {
       .container {
-        max-width: 540px; } }
+        max-width: 100%; } }
     @media (min-width: 768px) {
       .container {
-        max-width: 720px; } }
+        max-width: 100%; } }
     @media (min-width: 992px) {
       .container {
-        max-width: 960px; } }
+        max-width: 100%; } }
     @media (min-width: 1200px) {
       .container {
+        height: 100%;
         max-width: 100%; } }
   
   .container-fluid {
@@ -5062,8 +5062,12 @@
     color: #212529; }
   
   .carousel {
-    width: 100%;
-    background-size: 100%; }
+    z-index: -1;
+    height: 550px;
+    /* against padding */
+    margin-left: -15px;
+    margin-right: -15px;
+    background-size: cover; }
   
   .carousel.pointer-event {
     -ms-touch-action: pan-y;
@@ -5252,6 +5256,25 @@
     padding-bottom: 20px;
     color: #fff;
     text-align: center; }
+
+    .main_slider_content {
+      width: 60%;
+      text-align: center;
+    z-index: 6;
+    }
+
+  .fill_height {
+    height: 100%;
+    }
+
+  .main_content {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    }
+    
   
   @-webkit-keyframes spinner-border {
     to {
