@@ -8359,6 +8359,7 @@
       .logo {
         font-size: 16px;
         color: #fff; }
+      }
   
   .logo-control {
     height: 50px !important;
@@ -8367,6 +8368,67 @@
     font-size: 14px;
     border-radius: 0px;
     -webkit-box-shadow: none !important;
-    box-shadow: none !important;
+    box-shadow: none !important;}
     .logo-control:focus, .logo-control:active {
       border-color: #000; }
+    
+
+      .carousel-product {
+        border: none;
+        max-width: 100rem;
+        margin-inline: auto;
+        padding-inline: 2rem;
+        padding-top: 10rem;
+      }
+
+    
+      .product-grid {
+        display: grid;
+        gap:  5rem ;
+        grid-template-columns: 
+          repeat(auto-fit, minmax(15rem, 1fr));
+      }
+
+      .card {
+        aspect-ratio: 1 / 1.5;
+/*         border: 3px solid hotpink;
+ */      }
+
+      .card_content {
+        background: white;
+        align-self: end;
+        margin: .5rem .5rem 2rem;
+        padding: .5rem;
+        box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+      }
+
+      .card_title {
+        font-size: 1.25rem;
+        line-height: 1.1;
+        color: firebrick;
+      }
+
+      .card-price {
+        font-size: 1.75rem;
+      }
+
+      .stacked {
+        display: grid;
+      }
+
+      .stacked > * {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+
+      .card_img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+
+      .img,
+      picture {
+        max-width: 100%;
+        display: block;
+      }
