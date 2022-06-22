@@ -10,7 +10,7 @@
                     </div>
                     <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
                         <div class="logo d-flex justify-content-center">
-                            <a href="/"><img src="{{URL::asset('/images/logo-bra.jpg')}}" href="/" class="logo-control"></a>
+                            <a href="/"><img src="images/logo-bra.jpg" href="/" class="logo-control"></a>
                         </div>
                     </div>
                 </div>

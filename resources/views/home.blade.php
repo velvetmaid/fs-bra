@@ -12,7 +12,7 @@
         </div>
     </div>
 </div>
-<div class="carousel-product" style="none">
+<div class="carousel-product">
     <div class="product-grid">
         <div class="card stacked">
             <img src="images/home-1.jpg" alt="" class="card_img">

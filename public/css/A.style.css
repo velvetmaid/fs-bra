@@ -174,8 +174,8 @@ sup {
   top: -.5em;
 }
 
-.fa {
-  color: #fff;
+.fa-bars {
+  color: rgb(0, 0, 0);
 }
 
 a {
@@ -11812,7 +11812,6 @@ h5,
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
-  font-size: 11px;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-left: 20px;
@@ -11863,7 +11862,7 @@ h5,
   }
 
   .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
-    color: #fff;
+    color: #000;
   }
 }
 
@@ -12012,7 +12011,7 @@ h5,
 
 .logo {
   height: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
   @media (min-width: 992px) {
     .logo {
@@ -12049,14 +12048,13 @@ h5,
 
   .logo {
     height: 100px;
-    background: #ff0000 !important;
   }
 
   .logo {
     font-size: 16px;
     color: #fff;
   }
-}
+
 
 
 .carousel-product {
@@ -12121,7 +12119,7 @@ picture {
   display: block;
 }
 
-/* *{
+/* footer *{
       margin: 0;
       padding: 0;
       color: #d9d9d9;
@@ -12327,5 +12325,34 @@ footer {
   .main-content .box {
     margin: 5px 0;
     padding: 10px 20px;
+  }
+}
+
+/* about */
+
+.content-about {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 5rem; 
+  border: 1px solid black; 
+  width: 100%; 
+  margin: 0.125rem;
+}
+
+.left-content-about .right-content-about {
+  margin: 10px; 
+  border: 5px solid hotpink; 
+}
+
+@media screen and (max-width: 991px) {
+  .content-about {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .content-about > .left-content-about .right-content-about {
+    flex: 1;          /* Distribute space equally among the flex items */
+    min-width: 300px; /* But force them to be at least300px wide */
+    border: 1px solid;
   }
 }
