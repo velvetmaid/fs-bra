@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
- :root {
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -12013,47 +12013,47 @@ h5,
   height: 100%;
 }
 
-  @media (min-width: 992px) {
-    .logo {
-      width: auto;
-    }
-  }
-
-  .logo .logo-control {
-    border: none;
-    background: #fff !important;
-    color: rgba(0, 0, 0, 0.7) !important;
-    font-size: 14px;
-  }
-
-  .logo .logo-control::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: rgba(0, 0, 0, 0.7) !important;
-  }
-
-  .logo .logo-control::-moz-placeholder {
-    /* Firefox 19+ */
-    color: rgba(0, 0, 0, 0.7) !important;
-  }
-
-  .logo .logo-control:-ms-input-placeholder {
-    /* IE 0+ */
-    color: rgba(0, 0, 0, 0.7) !important;
-  }
-
-  .logo .logo-control:-moz-placeholder {
-    /* Firefox 18- */
-    color: rgba(0, 0, 0, 0.7) !important;
-  }
-
+@media (min-width: 992px) {
   .logo {
-    height: 100px;
+    width: auto;
   }
+}
 
-  .logo {
-    font-size: 16px;
-    color: #fff;
-  }
+.logo .logo-control {
+  border: none;
+  background: #fff !important;
+  color: rgba(0, 0, 0, 0.7) !important;
+  font-size: 14px;
+}
+
+.logo .logo-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.logo .logo-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.logo .logo-control:-ms-input-placeholder {
+  /* IE 0+ */
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.logo .logo-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.logo {
+  height: 100px;
+}
+
+.logo {
+  font-size: 16px;
+  color: #fff;
+}
 
 
 
@@ -12331,17 +12331,38 @@ footer {
 /* about */
 
 .content-about {
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-gap: 5rem; 
-  border: 1px solid black; 
-  width: 100%; 
-  margin: 0.125rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+  border: 1px solid black;
+  width: 100%;
+  padding: 5rem;
+}
+
+h6.contact-title {
+  text-align: center;
+}
+
+.call, .chat, .email {
+  display: -webkit-inline-box;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+span.icon-name-about, span.icon-desc-about {
+  border: 2px solid black;
+  display: table-row-group;
+}
+
+.contact-icon {
+  font-size: 60px;
+  border: 2px solid black;
 }
 
 .left-content-about .right-content-about {
-  margin: 10px; 
-  border: 5px solid hotpink; 
+  margin: 10px;
+  height: 100%;
+  border: 5px solid hotpink;
 }
 
 @media screen and (max-width: 991px) {
@@ -12350,9 +12371,11 @@ footer {
     flex-wrap: wrap;
   }
 
-  .content-about > .left-content-about .right-content-about {
-    flex: 1;          /* Distribute space equally among the flex items */
-    min-width: 300px; /* But force them to be at least300px wide */
+  .content-about>.left-content-about .right-content-about {
+    flex: 1;
+    /* Distribute space equally among the flex items */
+    min-width: 300px;
+    /* But force them to be at least300px wide */
     border: 1px solid;
   }
 }
