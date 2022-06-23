@@ -41,7 +41,7 @@
               <span class="fas fa-phone-alt"></span>
               <span class="text">02108888</span>
             </div>
-            <div class="email">
+            <div class="mail">
               <span class="fas fa-envelope"></span>
               <span class="text">main@mail.com</span>
             </div>
