@@ -322,42 +322,76 @@ select.logo-control:focus::-ms-value {
 
 .top-layout-bg {
   position: static;
-  height: 550px;
   /* against padding */
   margin-left: -15px;
   margin-right: -15px;
-  background-size: 100% 100%;
 }
 
-.main_slider_content {
-  width: 90%;
+.top-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+  /*   border: 1px solid black;
+ */
+  width: 100%;
+  padding: 5rem;
 }
 
-.fill_height {
-  height: 100%;
-  margin: 0;
-  /* don't delete */
+.left-top-layout, .bottom-left-layout{
+  text-align: center;
+  margin: auto;
 }
 
-.teks-title {
-  width: 35%;
-  float: left;
+.searchContainer {
+  display: grid;
+  grid-template-columns: 1.5rem 4fr 1fr;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.main_content {
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 100%;
-  margin-left: 100px;
+.searchContainer:focus-within i {
+  display: none;
+}
+
+.searchContainer:focus-within .searchBox {
+  grid-column: 1/4;
+}
+
+.searchContainer:focus-within .searchBox::placeholder {
+  color: transparent;
+}
+
+.searchIcon {
+  padding: 1rem;
+  text-align: center;
+  z-index: 2
+}
+
+.searchBox {
+  border: 0;
+  padding: 0.5rem;
+  grid-column: 2/4;
+  grid-row: 1;
+  outline: none;
+}
+
+.searchButton {
+  background: #538AC5;
+  border: 0;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0;
+  grid-column: 4/5;
+  grid-row: 1;
 }
 
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #ff0000;
+  color: #0099ff;
 }
 
 a:hover,
@@ -674,13 +708,13 @@ h5,
 
 /* end */
 
-/* footer *{
-      margin: 0;
-      padding: 0;
-      color: #d9d9d9;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    } */
+footer * {
+  margin: 0;
+  padding: 0;
+  color: #d9d9d9;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
 .content1 {
   position: relative;
@@ -765,12 +799,12 @@ footer {
   line-height: 40px;
   text-align: center;
   font-size: 18px;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.3s;
 }
 
 .left .content .social a span:hover {
-  background: #f12020;
+  background: #46a71a;
 }
 
 .center .content .fas {
@@ -889,7 +923,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5rem;
-  border: 1px solid black;
+  /*   border: 1px solid black;
+ */
   width: 100%;
   padding: 5rem;
 }
@@ -910,19 +945,20 @@ h6.contact-title {
 .chat,
 .email {
   display: -webkit-inline-box;
-  border: 2px solid black;
+  /*   border: 2px solid black;
+ */
   margin: 10px;
 }
 
 span.icon-name-about,
 span.icon-desc-about {
-  border: 2px solid black;
   display: table-row-group;
 }
 
 .contact-icon {
   font-size: 60px;
-  border: 2px solid black;
+  /*   border: 2px solid black;
+ */
   margin: 0.4rem;
 }
 
@@ -941,4 +977,5 @@ span.icon-desc-about {
     grid-gap: 2rem;
   }
 }
-/* end */
+
+/* end About */

@@ -13,12 +13,12 @@
         <span class="icon-desc-about">021 4444 4444</span>
       </div>
       <div class="email">
-        <span class="fas fa-envelope-open-text contact-icon"></span>
+        <a href="/" class="fas fa-envelope-open-text contact-icon"></a>
         <span class="icon-name-about">Email</span>
         <span class="icon-desc-about">Ardito@mail.com</span>
       </div>
       <div class="chat">
-        <span class="fas fa-comments contact-icon"></span>
+        <a href="/" class="fas fa-comments contact-icon"></a>
         <span class="icon-name-about">Chat</span>
         <span class="icon-desc-about">+62 123 4444</span>
       </div>
