@@ -321,6 +321,7 @@ select.logo-control:focus::-ms-value {
 }
 
 .top-layout-bg {
+  background-size: 100%;
   position: static;
   /* against padding */
   margin-left: -15px;
@@ -337,54 +338,51 @@ select.logo-control:focus::-ms-value {
   padding: 5rem;
 }
 
-.left-top-layout, .bottom-left-layout{
+.right-top-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-top-layout-bg {
+  width: 100%;
+  border-radius: 20%;
+  padding: 2rem;
+}
+
+.left-top-layout,
+.bottom-left-layout {
   text-align: center;
   margin: auto;
+  padding: 2rem;
 }
 
 .searchContainer {
-  display: grid;
-  grid-template-columns: 1.5rem 4fr 1fr;
-  width: 300px;
+  display: inline-flex;
+  flex: 1 1 300px;
+  position: relative;
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow: hidden;
 }
 
-.searchContainer:focus-within i {
-  display: none;
-}
-
-.searchContainer:focus-within .searchBox {
-  grid-column: 1/4;
-}
-
-.searchContainer:focus-within .searchBox::placeholder {
-  color: transparent;
-}
-
 .searchIcon {
   padding: 1rem;
-  text-align: center;
-  z-index: 2
+  background-color: #fff;
 }
 
 .searchBox {
   border: 0;
-  padding: 0.5rem;
-  grid-column: 2/4;
-  grid-row: 1;
-  outline: none;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  flex: 1;
 }
 
 .searchButton {
   background: #538AC5;
   border: 0;
-  color: white;
+  color: #fff;
   padding: 0.5rem;
   border-radius: 0;
-  grid-column: 4/5;
-  grid-row: 1;
 }
 
 a {
@@ -969,7 +967,7 @@ span.icon-desc-about {
 }
 
 @media screen and (max-width: 1056px) {
-  .content-about {
+  .content-about, .top-layout {
     flex-direction: column-reverse;
     display: flex;
     flex-wrap: wrap;

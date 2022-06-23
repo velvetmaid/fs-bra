@@ -11,14 +11,14 @@
             </div>
             <div class="bottom-left-layout">
                 <div class="searchContainer">
-                    <i class="fa fa-search searchIcon"></i>
+                    <i class="fa fa-map-marker searchIcon"></i>
                     <input class="searchBox" type="search" name="search" placeholder="Search...">
                     <input type="submit" value="Search" class="searchButton">
                 </div>
             </div>
         </div>
         <div class="right-top-layout">
-            <img src="images/home-1.jpg" style="width: 100%;" alt="">
+            <img src="images/home-1.jpg" class="right-top-layout-bg" alt="">
         </div>
     </div>
 </div>
