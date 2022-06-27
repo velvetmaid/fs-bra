@@ -332,22 +332,42 @@ select.logo-control:focus::-ms-value {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5rem;
-  /*   border: 1px solid black;
- */
-  width: 100%;
+/*   border: 1px solid black;
+ */  
+ width: 100%;
   padding: 5rem;
+}
+
+@media screen and (max-width: 1056px) {
+  .top-layout {
+    flex-direction: column-reverse;
+    display: flex;
+    flex-wrap: wrap;
+    padding: initial;
+    grid-gap: 2rem;
+    align-content: center;
+  }
 }
 
 .right-top-layout {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 3rem;
 }
 
 .right-top-layout-bg {
-  width: 100%;
-  border-radius: 20%;
-  padding: 2rem;
+    width: 100%;
+    height: -webkit-fill-available;
+    border-radius: 10%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+@media screen and (max-width: 1056px) {
+  .right-top-layout-bg {
+    width: 80%;
+  }
 }
 
 .left-top-layout,
@@ -967,7 +987,7 @@ span.icon-desc-about {
 }
 
 @media screen and (max-width: 1056px) {
-  .content-about, .top-layout {
+  .content-about {
     flex-direction: column-reverse;
     display: flex;
     flex-wrap: wrap;
