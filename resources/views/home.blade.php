@@ -2,7 +2,7 @@
 
 @section('container')
 
-<div class="top-layout-bg" style="background-image:url(images/home-bg.jpg)">
+<div class="top-layout-bg">
     <div class="top-layout">
         <div class="left-top-layout">
             <div class="top-left-top-layout">

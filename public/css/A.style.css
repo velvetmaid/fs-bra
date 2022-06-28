@@ -321,6 +321,7 @@ select.logo-control:focus::-ms-value {
 }
 
 .top-layout-bg {
+  background-image: url(/images/home-bg.jpg);
   background-size: 100%;
   position: static;
   /* against padding */
@@ -328,7 +329,7 @@ select.logo-control:focus::-ms-value {
   margin-right: -15px;
 }
 
-.top-layout {
+.top-layout, .content-about {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5rem;
@@ -339,7 +340,7 @@ select.logo-control:focus::-ms-value {
 }
 
 @media screen and (max-width: 1056px) {
-  .top-layout {
+  .top-layout, .content-about {
     flex-direction: column-reverse;
     display: flex;
     flex-wrap: wrap;
@@ -353,22 +354,20 @@ select.logo-control:focus::-ms-value {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3rem;
+  padding: 1rem;
 }
 
-.right-top-layout-bg {
+.right-top-layout-bg, .contact-bg {
+    margin: 1rem;
     width: 100%;
     height: -webkit-fill-available;
-    border-radius: 10%;
+    object-fit: cover;
+    border-radius: 13%;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
+    padding: 1rem;
 }
 
-@media screen and (max-width: 1056px) {
-  .right-top-layout-bg {
-    width: 80%;
-  }
-}
 
 .left-top-layout,
 .bottom-left-layout {
@@ -590,10 +589,10 @@ h5,
   color: #000;
   margin-left: 16px;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 900;
+  font-size: 1.3rem;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.5;
   margin-bottom: 30px;
 }
 
@@ -937,23 +936,7 @@ footer {
 
 /* About */
 
-.content-about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5rem;
-  /*   border: 1px solid black;
- */
-  width: 100%;
-  padding: 5rem;
-}
 
-.contact-bg {
-  width: 100%;
-  height: -webkit-fill-available;
-  border-radius: 10%;
-  -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
-}
 
 h6.contact-title {
   text-align: center;
@@ -986,14 +969,10 @@ span.icon-desc-about {
   border: 5px solid hotpink;
 }
 
-@media screen and (max-width: 1056px) {
-  .content-about {
-    flex-direction: column-reverse;
-    display: flex;
-    flex-wrap: wrap;
-    padding: initial;
-    grid-gap: 2rem;
-  }
+.google-maps iframe {
+  width: 100%; 
+  height: 500px; 
+  border: 0;
 }
 
 /* end About */
