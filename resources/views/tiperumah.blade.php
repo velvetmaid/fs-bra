@@ -2,5 +2,5 @@
 
 
 @section('container')
-<h1>Other</h1>
+<h1>Tipe Rumah</h1>
 @endsection

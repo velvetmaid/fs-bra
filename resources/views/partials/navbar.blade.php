@@ -10,7 +10,7 @@
                     </div>
                     <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
                         <div class="logo d-flex justify-content-center">
-                            <a href="/"><img src="images/logo-bra.jpg" href="/" class="logo-control"></a>
+                            <a href="/"><img src="/images/logo/logo-bra.jpg" href="/" class="logo-control"></a>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item {{ ($title === "Home") ? 'active' : '' }}"><a href="/" class="nav-link">Home</a></li>
-                    <li class="nav-item {{ ($title === "Other") ? 'active' : '' }}"><a href="/other" class="nav-link">Work</a></li>
+                    <li class="nav-item {{ ($title === "Tipe Rumah") ? 'active' : '' }}"><a href="/other" class="nav-link">Tipe Rumah</a></li>
                     <li class="nav-item {{ ($title === "Contact Us") ? 'active' : '' }}"><a href="/contactus" class="nav-link">Contact</a></li>
                 </ul>
             </div>

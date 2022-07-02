@@ -4,7 +4,7 @@
           <h2>INI LOGO</h2>
           <div class="content">
             <div class="social">
-              <a href="/"><img src="images/le-casa-bonita.png" style="width: 15rem;" class="logo-control" /></a>
+              <a href="/"><img src="images/logo/le-casa-bonita.png" style="width: 15rem;" class="logo-control" /></a>
             </div>
           </div>
         </div>

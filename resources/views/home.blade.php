@@ -18,86 +18,12 @@
             </div>
         </div>
         <div class="right-top-layout">
-            <img src="images/home-1.jpg" class="right-top-layout-bg" alt="">
+            <img src="images/type-home/rumah 36 60.jfif" class="right-top-layout-bg" alt="">
         </div>
     </div>
 </div>
-<div class="carousel-product">
-    <div class="product-grid">
-        <div class="card stacked">
-            <img src="images/home-1.jpg" alt="" class="card_img">
-            <div class="card_content">
-                <h2 class="card_title">Private Room</h2>
-                <p class="card_price">Puri Gading Serpong</p>
-                <p class="card_description">2578 Folsom street, san fransisco, CA, 94110</p>
-            </div>
-        </div>
-        <div class="card stacked">
-            <img src="images/home-1.jpg" alt="" class="card_img">
-            <div class="card_content">
-                <h2 class="card_title">Private Room</h2>
-                <p class="card_price">Puri Gading Serpong</p>
-                <p class="card_description">2578 Folsom street, san fransisco, CA, 94110</p>
-            </div>
-        </div>
-        <div class="card stacked">
-            <img src="images/home-1.jpg" alt="" class="card_img">
-            <div class="card_content">
-                <h2 class="card_title">Private Room</h2>
-                <p class="card_price">Puri Gading Serpong</p>
-                <p class="card_description">2578 Folsom street, san fransisco, CA, 94110</p>
-            </div>
-        </div>
-        <div class="card stacked">
-            <img src="images/home-1.jpg" alt="" class="card_img">
-            <div class="card_content">
-                <h2 class="card_title">Private Room</h2>
-                <p class="card_price">Puri Gading Serpong</p>
-                <p class="card_description">2578 Folsom street, san fransisco, CA, 94110</p>
-            </div>
-        </div>
-        <div class="card stacked">
-            <img src="images/home-1.jpg" alt="" class="card_img">
-            <div class="card_content">
-                <h2 class="card_title">Private Room</h2>
-                <p class="card_price">Puri Gading Serpong</p>
-                <p class="card_description">2578 Folsom street, san fransisco, CA, 94110</p>
-            </div>
-        </div>
-        <div class="card stacked">
-            <img src="images/home-1.jpg" alt="" class="card_img">
-            <div class="card_content">
-                <h2 class="card_title">Private Room</h2>
-                <p class="card_price">Puri Gading Serpong</p>
-                <p class="card_description">2578 Folsom street, san fransisco, CA, 94110</p>
-            </div>
-        </div>
-        <div class="card stacked">
-            <img src="images/home-1.jpg" alt="" class="card_img">
-            <div class="card_content">
-                <h2 class="card_title">Private Room</h2>
-                <p class="card_price">Puri Gading Serpong</p>
-                <p class="card_description">2578 Folsom street, san fransisco, CA, 94110</p>
-            </div>
-        </div>
-        <div class="card stacked">
-            <img src="images/home-1.jpg" alt="" class="card_img">
-            <div class="card_content">
-                <h2 class="card_title">Private Room</h2>
-                <p class="card_price">Puri Gading Serpong</p>
-                <p class="card_description">2578 Folsom street, san fransisco, CA, 94110</p>
-            </div>
-        </div>
-        <div class="card stacked">
-            <img src="images/home-1.jpg" alt="" class="card_img">
-            <div class="card_content">
-                <h2 class="card_title">Private Room</h2>
-                <p class="card_price">Puri Gading Serpong</p>
-                <p class="card_description">2578 Folsom street, san fransisco, CA, 94110</p>
-            </div>
-        </div>
-    </div>
-</div>
+@include('segments.type-home-gallery')
+@include('segments.facilities-gallery')
 </div>
 
 @endsection

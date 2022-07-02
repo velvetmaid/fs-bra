@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="right-top-layout">
-      <img src="images/home-1.jpg" class="right-top-layout-bg" alt="">
+      <img src="images/home-bg.jpg" class="right-top-layout-bg" alt="">
     </div>
     <div class="right-content-about">
       <div class="bottom-left-content-about">

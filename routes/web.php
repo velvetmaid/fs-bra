@@ -20,8 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/other', function () {
-    return view('other', [
-        "title" => "Other"
+    return view('tiperumah', [
+        "title" => "Tipe Rumah"
     ]);
 });
 
