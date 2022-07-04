@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item {{ ($title === "Home") ? 'active' : '' }}"><a href="/" class="nav-link">Home</a></li>
-                    <li class="nav-item {{ ($title === "Tipe Rumah") ? 'active' : '' }}"><a href="/other" class="nav-link">Tipe Rumah</a></li>
+                    <li class="nav-item {{ ($title === "Tipe Rumah") ? 'active' : '' }}"><a href="/#tiperumah" class="nav-link">Tipe Rumah</a></li>
                     <li class="nav-item {{ ($title === "Contact Us") ? 'active' : '' }}"><a href="/contactus" class="nav-link">Contact</a></li>
                 </ul>
             </div>
