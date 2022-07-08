@@ -43,3 +43,12 @@
     </nav>
 
 </section>
+
+<script>
+    $("#myModal").click(function() {
+        $('html,body').animate({
+                scrollTop: $("myModal").offset().top
+            },
+            'slow');
+    });
+</script>

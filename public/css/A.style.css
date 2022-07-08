@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Poppins", Arial, sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -230,7 +234,7 @@ h6,
     flex-direction: column-reverse;
     display: flex;
     flex-wrap: wrap;
-    padding: initial;
+    padding: 2rem;
     grid-gap: 2rem;
     align-content: center;
   }
@@ -260,7 +264,6 @@ h6,
 .bottom-left-layout {
   text-align: center;
   margin: auto;
-  padding: 2rem;
 }
 
 .searchContainer {
@@ -458,11 +461,8 @@ h5,
 }
 
 .ftco-navbar-light .navbar-toggler {
-  border: none;
-  color: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid;
   cursor: pointer;
-  padding-right: 0;
-  padding-left: 0;
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: .1em;
@@ -470,6 +470,12 @@ h5,
 
 .ftco-navbar-light .navbar-toggler:focus {
   outline: none !important;
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 .25rem;
 }
 
 .navbar-brand span {
@@ -544,21 +550,6 @@ h5,
 }
 
 /* Home grid properties */
-
-.carousel-product {
-  border: none;
-  margin-inline: auto;
-  padding-inline: 2rem;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-
-.product-grid {
-  display: grid;
-  gap: 5rem;
-  grid-template-columns:
-    repeat(auto-fit, minmax(15rem, 1fr));
-}
 
 .card {
   aspect-ratio: 1 / 1.5;
@@ -651,6 +642,7 @@ h5,
 .zoom video {
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
+  object-fit: cover;
 }
 
 .view img,

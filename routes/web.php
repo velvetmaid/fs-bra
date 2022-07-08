@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PropertiesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,20 +15,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => "Home"
-    ]);
-});
-
-Route::get('/other', function () {
-    return view('tiperumah', [
-        "title" => "Tipe Rumah"
-    ]);
-});
+/* Main Page */
 
 Route::get('/contactus', function () {
     return view('contactus', [
         "title" => "Contact Us"
     ]);
 });
+
+/* End Main Page */
+
+
+/* Admin Page */
+
+Route::get('/control-admin', function () {
+    return view('home', [
+        "title" => "Login"
+    ]);
+});
+
+Route::get('/addproperties', function () {
+    return view('admins/add-properties', [
+        "title" => "Add Properties"
+    ]);
+});
+
+Route::get('/', 'PropertiesController@index');
+
+
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::post('/add-properties', [PropertiesController::class, 'addproperties'])->name('addproperties');
+Route::get('/', [PropertiesController::class, 'properties'])->name('properties');

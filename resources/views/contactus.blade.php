@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="google-maps">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d350.55663190450724!2d106.52655040164032!3d-6.251140108029076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e420766f2e519a9%3A0xcf05128d6363176a!2zNsKwMTUnMDMuOSJTIDEwNsKwMzEnMzUuNyJF!5e0!3m2!1sen!2sid!4v1656424252829!5m2!1sen!2sid" allowfullscreen frameborder="0"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9432.970702244756!2d106.52579103234721!3d-6.25376688858329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e420766f2e519a9%3A0xcf05128d6363176a!2zNsKwMTUnMDMuOSJTIDEwNsKwMzEnMzUuNyJF!5e0!3m2!1sen!2sid!4v1656995166949!5m2!1sen!2sid&z=7" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </div>
 @endsection
