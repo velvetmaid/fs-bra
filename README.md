@@ -1,3 +1,5 @@
+<h1 align="center">LE CASA BONITA</h1>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="public/images/logo/le-casa-bonita.png" width="400"></a></p>
 
 <p align="center">
