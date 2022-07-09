@@ -19,6 +19,15 @@ class PropertiesController extends Controller
             ->with(compact('properties'));
     }
 
+    public function indexproperties()
+    {
+        $title = 'Detail Properties';
+        $properties = Properties::all();
+        return View::make('controls/admins/index-properties')
+            ->with('title', $title)
+            ->with(compact('properties'));
+    }
+
     public function addproperties(Request $request)
     {
         Properties::create($request->all());

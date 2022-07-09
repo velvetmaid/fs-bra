@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertiesController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,10 @@ use App\Http\Controllers\PropertiesController;
 
 /* Main Page */
 
+Auth::routes();
+
+Route::get('/', 'PropertiesController@index');
+
 Route::get('/contactus', function () {
     return view('contactus', [
         "title" => "Contact Us"
@@ -26,25 +31,37 @@ Route::get('/contactus', function () {
 /* End Main Page */
 
 
-/* Admin Page */
+/* Control Page */
 
-Route::get('/control-admin', function () {
-    return view('home', [
-        "title" => "Login"
+Route::get('/index-properties', function () {
+    return view('controls/admins/index-properties', [
+        "title" => "Index Properties"
     ]);
 });
 
-Route::get('/addproperties', function () {
+Route::get('/add-properties', function () {
     return view('admins/add-properties', [
         "title" => "Add Properties"
     ]);
 });
 
-Route::get('/', 'PropertiesController@index');
+/* End Control Page */
 
+/* Index Auth */
 
-Auth::routes();
+Route::get('/control-admin', function () {
+    return view('auth/login', [
+        "title" => "Login"
+    ]);
+});
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::post('/add-properties', [PropertiesController::class, 'addproperties'])->name('addproperties');
+/* End Index Auth */
+
+Route::get('/redirects', [HomeController::class, 'authentic']);
+
+/* Index Home Web */
 Route::get('/', [PropertiesController::class, 'properties'])->name('properties');
+/* Index Control */
+Route::get('/index-properties', [PropertiesController::class, 'indexproperties'])->name('indexproperties');
+Route::post('/add-properties', [PropertiesController::class, 'addproperties'])->name('addproperties');
+

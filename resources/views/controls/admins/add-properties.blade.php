@@ -1,4 +1,4 @@
-@include('admins.outline.header')
+@include('controls/admins.outline.header')
 
 <div class="container mt-5">
     <h1>Tambah Produk</h1>
@@ -51,4 +51,4 @@
 
 </div> <!-- container -->
 
-@include('admins.outline.footer')
+@include('controls/admins.outline.footer')
