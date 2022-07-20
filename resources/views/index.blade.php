@@ -3,26 +3,39 @@
 @section('container')
 
 <div class="top-layout-bg">
-    <div class="top-layout">
-        <div class="left-top-layout">
-            <div class="top-left-top-layout">
-                <h1> The most affortable place to stay in the san franciso bay area </h1>
-                <p> Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy </p>
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="overlay-image" style="background-image:url(images/slideshows/slideshow-1.png)" alt="First slide">
+                </div>
             </div>
-            <div class="bottom-left-layout">
-                <div class="searchContainer">
-                    <i class="fa fa-map-marker searchIcon"></i>
-                    <input class="searchBox" type="search" name="search" placeholder="Search...">
-                    <input type="submit" value="Search" class="searchButton">
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image:url(images/slideshows/slideshow-2.png)" alt="First slide">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image:url(images/slideshows/slideshow-3.png)" alt="First slide">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image:url(images/slideshows/slideshow-4.png)" alt="First slide">
                 </div>
             </div>
         </div>
-        <div class="right-top-layout">
-            <img src="images/type-home/rumah 36 60.jfif" class="right-top-layout-bg" alt="">
-        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
-@include('segments.type-home-gallery')
-@include('segments.facilities-gallery')
-</div>
-@endsection
+@include('segments.type-home-gallery') @include('segments.facilities-gallery') </div>@endsection

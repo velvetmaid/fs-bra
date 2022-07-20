@@ -1,14 +1,14 @@
 <div id="home-detail1" class="modal fade">
-    <div class="modal-dialog modal-xl modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Default Modal</h5>
+                <h5 class="modal-title">TITLE HERE...</h5>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <section class="modal-body">
-                <div class="container">
+                <div class="container-fluid modal-layouts">
                     <div class="row">
-                        <div class="col-12 col-lg-6 mb-3">
+                        <div class="modal-layout-left col-12 col-lg-6 mb-3">
                             <img id="img" src="images/blueprint/3660 rumah.png" alt="" class="main-image w-100">
                             <div class="row mt-3">
                                 <div class="col-3 col-sm-3 col-md-3 col-lg-3">
@@ -33,43 +33,28 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="modal-layout-right col-12 col-lg-6 mb-3">
+                            <div class="container-fluid spacing-top">
+                                <div class="row top-0 ">
+                                    <div class="col-sm-12 my-auto top-3">
+                                        <div class="col-sm-10 card-block mx-auto text-center">
+                                            <h1 class="modal-desc-text">Properties Name</h1>
+                                        </div>
+                                        <div class="col-sm-10 card-block mx-auto text-center">
+                                            <h1 class="modal-desc-text">Properties Name</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid spacing-bottom">
+                                <button type="button" class="btn btn-primary btn-lg btn-block">Button</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Ok, I Understand</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="home-detail2" class="modal fade">
-    <div class="modal-dialog modal-xl modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Default Modal</h5>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>The default modal size has been changed to 600px. Now it is 100px wider than the previous 500px wide modal.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Ok, I Understand</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="home-detail3" class="modal fade">
-    <div class="modal-dialog modal-xl modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Default Modal</h5>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>The default modal size has been changed to 600px. Now it is 100px wider than the previous 500px wide modal.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Ok, I Understand</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

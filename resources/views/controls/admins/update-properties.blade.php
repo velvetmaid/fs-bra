@@ -1,43 +1,52 @@
 @include('controls/admins.outline.header')
 
-
 <div class="container mt-5">
     <h1>Update Produk</h1>
+    <hr>
 
-    <form action="" method="post">
-
-        <input type="hidden" id="id_produk" name="id_produk" value="<?= $produk['id_produk']; ?>">
-
+    <form action="/update-data-properties/{{ $properties->id }}" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="mb-3">
-            <label for="nama_produk" class="form-label">Nama Produk</label>
-            <input type="text" class="form-control" id="nama_produk" name="nama_produk" value="<?= $produk['nama_produk']; ?>" placeholder="Tuliskan nama Produk" required>
+            <label for="properties_name" class="form-label">Properties Name</label>
+            <input type="text" class="form-control" id="properties_name" name="properties_name" value="{{ $properties->properties_name }}" placeholder="Tuliskan nama Produk" required>
         </div>
 
         <div class="mb-3">
-            <label for="tipe" class="form-label">Tipe</label>
-            <input type="text" class="form-control" id="tipe" name="tipe" value="<?= $produk['tipe']; ?>" placeholder="Tuliskan nama Produk" required>
+            <label for="type" class="form-label">Type Home</label>
+            <input type="text" class="form-control" id="type" name="type" value="{{ $properties->type }}" placeholder="Tuliskan nama Produk" required>
         </div>
 
         <div class="mb-3">
-            <label for="lokasi" class="form-label">Lokasi</label>
-            <input type="text" class="form-control" id="lokasi" name="lokasi" value="<?= $produk['lokasi']; ?>" placeholder="Tuliskan nama Produk" required>
+            <label for="location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="location" name="location" value="{{ $properties->location }}" placeholder="Tuliskan nama Produk" required>
         </div>
 
         <div class="mb-3">
-            <label for="gambar" class="form-label">Gambar</label>
-            <img src="produk_id=<?php echo $row["produk_id"]; ?>" /><br />
-            <input type="file" class="form-control" id="gambar" name="gambar" value="<?= $produk['gambar']; ?>" placeholder="Tuliskan nama Produk">
+            <label for="properties_image" class="form-label">Properties Image</label>
+            <input type="file" class="form-control" id="properties_image" name="properties_image" value="{{ $properties->properties_image }}"> 
         </div>
 
         <div class="mb-3">
-            <label for="deskripsi" class="form-label">deskripsi</label>
-            <textarea type="text" class="form-control" id="deskripsi" name="deskripsi" placeholder="Tuliskan nama Produk" required><?= $produk['deskripsi'] ?></textarea>
+            <label for="blueprint_image" class="form-label">Blueprint Image</label>
+            <input type="file" class="form-control" id="blueprint_image" name="blueprint_image" value="{{ $properties->blueprint_image }}">
         </div>
 
-        <button type="submit" name="update" class="btn btn-primary" style="float: right;">Update</button>
-        <br />
-        <br />
-        <a href='index.php'> <button type="button" class="btn btn-danger btn-block">Cancle</button> </a>
+        <div class="mb-3">
+            <label for="properties_description" class="form-label">Properties Description</label>
+            <textarea class="form-control" rows="4" id="properties_description" name="properties_description" value="{{ $properties->properties_description }}" placeholder="Tuliskan nama Produk"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control" id="price" name="price" value="{{ $properties->price }}" placeholder="Tuliskan nama Produk">
+        </div>
+
+        <div class="mb-3">
+            <label for="notelp" class="form-label">No. Telp</label>
+            <input type="number" class="form-control" id="notelp" name="notelp" value="{{ $properties->notelp }}" placeholder="No. Telp yang dapat di hubungi">
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="float: right;">Tambahkan</button>
     </form>
 
 </div> <!-- container -->

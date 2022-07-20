@@ -25,7 +25,7 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    public function authentic()
+    public function rolesauth()
     {
         $role = Auth::user()->role;
 
@@ -35,9 +35,18 @@ class HomeController extends Controller
         if ($role == 'admin') {
             $title = 'Detail Properties';
             $properties = Properties::all();
-            return View('controls/admins/index-properties')
+            return View('controls.admins.index-properties')
                 ->with('title', $title)
                 ->with(compact('properties'));
         }
+    }
+
+    public function accounts()
+    {
+        $title = 'Home';
+        $properties = Properties::all();
+        return View('index')
+            ->with('title', $title)
+            ->with(compact('properties'));
     }
 }
