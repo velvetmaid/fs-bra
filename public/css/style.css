@@ -74,7 +74,7 @@ a:not([href]):not([tabindex]):focus {
 .logo-control {
   margin-left: auto;
   margin-right: auto;
-  height: 100px !important;
+  height: 5em !important;
   border-radius: 0px;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
@@ -111,19 +111,15 @@ a:not([href]):not([tabindex]):focus {
   justify-content: space-between;
 }
 
-.navbar-brand {
-  display: inline-block;
-  padding-top: 0.315rem;
+.navbar-brand, .navbar-brand.span {
+  padding-top: 6%;
   padding-bottom: 0.315rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
   white-space: nowrap;
   color: #000;
   margin-left: 16px;
   text-transform: uppercase;
   font-weight: 900;
-  text-align: center;
+  justify-content: center;
 }
 
 .navbar-brand:hover,
@@ -289,7 +285,7 @@ a:not([href]):not([tabindex]):focus {
   }
 
   .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
-    color: #000;
+    color: #005c09;
   }
 }
 
@@ -382,7 +378,7 @@ a:not([href]):not([tabindex]):focus {
 .navbar-brand span {
   display: block;
   font-size: 12px;
-  font-weight: 50s0;
+  font-weight: 50s;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -429,7 +425,7 @@ a:not([href]):not([tabindex]):focus {
 }
 
 .logo {
-  height: 100%;
+  width: 100%;
 }
 
 @media (min-width: 992px) {
@@ -438,26 +434,13 @@ a:not([href]):not([tabindex]):focus {
   }
 }
 
-.logo .logo-control {
-  border: none;
-  background: #fff !important;
-  color: rgba(0, 0, 0, 0.7) !important;
-  font-size: 14px;
-}
-
-.logo {
-  font-size: 16px;
-  color: #fff;
-}
-
 /* Home grid properties */
-
 .card {
   aspect-ratio: 1 / 1.5;
   /* border: 3px solid hotpink; */
 }
 
-.card_content {
+.card-content {
   background: white;
   align-self: end;
   margin: .5rem .5rem 2rem;
@@ -465,7 +448,7 @@ a:not([href]):not([tabindex]):focus {
   box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
 }
 
-.card_title {
+.card-title {
   font-size: 1.25rem;
   line-height: 1.1;
   color: firebrick;
@@ -484,16 +467,14 @@ a:not([href]):not([tabindex]):focus {
   grid-row: 1 / 2;
 }
 
-.card_img {
+.card-img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
-
 /* End Home Grid*/
 
 /* facilites */
-
 .container-facilities {
   margin-left: 0;
   margin-right: 0;

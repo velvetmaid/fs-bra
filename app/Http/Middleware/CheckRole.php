@@ -15,11 +15,16 @@ class CheckRole
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle($request, Closure $next, ...$roles)
+    public function handle(Request $request, Closure $next, $roles)
     {
-        if (in_array($request->user()->role, $roles)){
-            return $next($request);
+        if (!Auth::check()) {
+            return redirect('login');
         }
-        return redirect('/');
+        $user = Auth::user();
+
+        if($user->roles == $roles)
+            return $next($request);
+
+        return redirect('login')->with('error',"kamu gak punya akses");
     }
 }
