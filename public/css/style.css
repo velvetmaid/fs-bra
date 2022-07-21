@@ -4,7 +4,6 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Poppins", Arial, sans-serif, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -13,11 +12,10 @@ body {
   font-weight: normal;
   background-color: #fff;
   background-size: 100%;
-  color: gray;
 }
 
 .fa-bars {
-  color: rgb(0, 0, 0);
+  color: #006000;
 }
 
 a {
@@ -80,40 +78,9 @@ a:not([href]):not([tabindex]):focus {
   box-shadow: none !important;
 }
 
-.navbar {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-}
-
-.navbar>.container,
-.navbar>.container-fluid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.navbar-brand, .navbar-brand.span {
+.navbar-brand,
+.navbar-brand.span {
   padding-top: 6%;
-  padding-bottom: 0.315rem;
   white-space: nowrap;
   color: #000;
   margin-left: 16px;
@@ -156,15 +123,33 @@ a:not([href]):not([tabindex]):focus {
   padding-bottom: 0.5rem;
 }
 
-.navbar-collapse {
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 45%;
+    height: 100%;
+    background-color: white;
+    z-index: 2;
+  }
+
+  .navbar-collapse.collapsing {
+    right: -70%;
+    transition: height 0s ease;
+  }
+
+  .navbar-collapse.show {
+    right: 0;
+    transition: right 300ms ease-in-out;
+  }
+
+  .navbar-toggler.collapsed~.navbar-collapse {
+    transition: right 500ms ease-in-out;
+  }
 }
 
 .top-layout-bg {
@@ -304,26 +289,10 @@ a:not([href]):not([tabindex]):focus {
   border-radius: 4px;
 }
 
-.ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu .dropdown-item {
-  font-size: 12px;
-  color: #000;
-}
-
 .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu .dropdown-item:hover,
 .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu .dropdown-item:focus {
   background: #228B22;
   color: #fff;
-}
-
-@media (max-width: 991.98px) {
-  .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu {
-    display: block !important;
-    background: #000;
-  }
-
-  .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu .dropdown-item {
-    color: rgba(255, 255, 255, 0.8);
-  }
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item.cta>a {
@@ -361,7 +330,7 @@ a:not([href]):not([tabindex]):focus {
   border: 1px solid;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 26px;
   letter-spacing: .1em;
 }
 
@@ -372,7 +341,7 @@ a:not([href]):not([tabindex]):focus {
 .navbar-toggler:focus {
   text-decoration: none;
   outline: 0;
-  box-shadow: 0 0 0 .25rem;
+  box-shadow: 0 0 0 .1rem;
 }
 
 .navbar-brand span {
@@ -472,6 +441,7 @@ a:not([href]):not([tabindex]):focus {
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
+
 /* End Home Grid*/
 
 /* facilites */
@@ -710,8 +680,9 @@ footer {
   cursor: pointer;
 }
 
-.left .content .social a span:hover, .center .content .fas:hover {
-  background: 	#228B22;
+.left .content .social a span:hover,
+.center .content .fas:hover {
+  background: #228B22;
 }
 
 .center .content .text {

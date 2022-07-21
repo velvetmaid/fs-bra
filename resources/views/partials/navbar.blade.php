@@ -23,11 +23,13 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fa fa-bars fa-3x"></span>
+            <button class="navbar-toggler ml-auto hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars fa-2x"></span>
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav m-auto">
+                    <a class="close-navbar-collapse d-lg-none" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-times" aria-hidden="true"></i>
+                    </a>
                     <li class="nav-item {{ ($title === "Home") ? 'active' : '' }}"><a href="/" class="nav-link">Home</a></li>
                     <li class="nav-item {{ ($title === "Tipe Rumah") ? 'active' : '' }}"><a href="/#tiperumah" class="nav-link">Tipe Rumah</a></li>
                     <li class="nav-item {{ ($title === "Contact Us") ? 'active' : '' }}"><a href="/contactus" class="nav-link">Contact</a></li>
