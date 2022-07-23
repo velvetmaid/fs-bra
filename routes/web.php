@@ -17,10 +17,11 @@ use Illuminate\Support\Facades\Auth;
 */
 
 /* Main Page */
+
 Route::get('/', 'PropertiesController@index');
 
-Route::get('/contactus', function () {
-    return view('contactus', [
+Route::get('/contact-us', function () {
+    return view('contact-us', [
         "title" => "Contact Us"
     ]);
 });

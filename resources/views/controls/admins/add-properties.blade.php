@@ -3,7 +3,6 @@
 <div class="container mt-5">
     <h1>Tambah Produk</h1>
     <hr>
-
     <form action="/add-properties" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
@@ -23,12 +22,12 @@
 
         <div class="mb-3">
             <label for="properties_image" class="form-label">Properties Image</label>
-            <input type="file" class="form-control" id="properties_image" name="properties_image" >
+            <input type="file" class="form-control" id="properties_image" name="properties_image">
         </div>
 
         <div class="mb-3">
             <label for="blueprint_image" class="form-label">Blueprint Image</label>
-            <input type="file" class="form-control" id="blueprint_image" name="blueprint_image">
+            <input type="file" class="form-control" id="blueprint_image" name="blueprint_image[]" multiple>
         </div>
 
         <div class="mb-3">
@@ -48,7 +47,6 @@
 
         <button type="submit" class="btn btn-primary" style="float: right;">Tambahkan</button>
     </form>
-
-</div> <!-- container -->
+</div>
 
 @include('controls/admins.outline.footer')

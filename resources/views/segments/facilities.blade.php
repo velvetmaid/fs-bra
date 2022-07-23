@@ -26,4 +26,3 @@
         </div>
     </div>
 </div>
-@include('segments/blueprint/home-detail')

@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container" id="list-properties">
     <h1>TITLE TEXT HERE...</h1>
-    <div class="row" id="tiperumah">
+    <div class="row">
         @foreach($properties as $property)
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="card stacked" data-aos="zoom-in">
-                <a href="" data-target="#home-detail1" data-toggle="modal" role="document">
+                <a href="" data-target="#myModal{{$property->id}}" data-toggle="modal" role="document">
                     <img src="{{ asset('images/properties-image/'.$property->properties_image) }}" alt="" class="card-img">
                 </a>
                 <div class="card-content">
@@ -17,3 +17,4 @@
         @endforeach
     </div>
 </div>
+@include('segments.blueprints.blueprint')

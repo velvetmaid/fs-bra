@@ -1,8 +1,9 @@
-<div id="home-detail1" class="modal fade">
+@foreach($properties as $property)
+<div id="myModal{{$property->id}}" class="modal fade">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">TITLE HERE...</h5>
+                <h5 class="modal-title">TITLE HERE..</h5>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <section class="modal-body">
@@ -38,10 +39,10 @@
                                 <div class="row top-0 ">
                                     <div class="col-sm-12 my-auto top-3">
                                         <div class="col-sm-10 card-block mx-auto text-center">
-                                            <h1 class="modal-desc-text">Properties Name</h1>
+                                            <h1 class="modal-desc-text">{{ $property->properties_name }}</h1>
                                         </div>
                                         <div class="col-sm-10 card-block mx-auto text-center">
-                                            <h1 class="modal-desc-text">Properties Name</h1>
+                                            <p class="modal-desc-text">{{ $property->type }}</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -59,9 +60,4 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-    function changeImage(a) {
-        document.getElementById("img").src = a;
-    }
-</script>
+@endforeach
