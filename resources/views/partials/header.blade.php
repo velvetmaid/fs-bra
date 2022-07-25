@@ -1,4 +1,5 @@
-<header id="header-container" class="ftco-section shadow rounded ">
+<header id="header-container" class="ftco-section rounded">
+
     <div class="container">
         <div class="container-fluid px-md-5">
             <div class="row justify-content-between">
@@ -18,9 +19,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
-        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
             <button class="navbar-toggler ml-auto hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fa fa-bars fa-2x"></span>
             </button>
@@ -33,7 +32,7 @@
                     <li class="nav-item {{ ($title === "Contact Us") ? 'active' : '' }}"><a href="/contact-us" class="nav-link">Contact</a></li>
                 </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
 </header>
