@@ -25,7 +25,6 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Install
 
-- **[Tighten Co.](https://tighten.co)**
 - Run : $ git clone https://github.com/camieuxgoofy/cp-bra.git
 - Go to the folder application using $ cd 'YOUR PATH DIRECTORY' command on your cmd or terminal
 - Run : $ composer install on your cmd or terminal
