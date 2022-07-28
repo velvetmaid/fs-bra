@@ -36,15 +36,3 @@
     </div>
 </section>
 @include('segments.blueprints.blueprint')
-
-<!-- Inline JS -->
-<script>
-    $(document).ready(function() {
-
-        $('.card').delay(1800).queue(function(next) {
-            $(this).removeClass('.card.hover');
-            $('overlay-hover.hover').removeClass('overlay-hover');
-            next();
-        });
-    });
-</script>
