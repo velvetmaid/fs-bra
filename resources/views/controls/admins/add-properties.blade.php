@@ -27,7 +27,7 @@
 
         <div class="mb-3">
             <label for="blueprint_image" class="form-label">Blueprint Image</label>
-            <input type="file" class="form-control" id="blueprint_image" name="blueprint_image[]" multiple>
+            <input type="file" class="form-control" id="blueprint_image" name="blueprint_image">
         </div>
 
         <div class="mb-3">
