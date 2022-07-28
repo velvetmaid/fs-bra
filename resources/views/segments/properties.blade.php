@@ -1,6 +1,10 @@
 <section class="wp-block" style="background-color:#dcc7b7">
-    <div class="container" id="list-properties">
-        <h1>TITLE TEXT HERE...</h1>
+    <div class="container">
+        <h1 id="list-properties" class="text-center">
+            <span>
+                <span class="heading-content">Properties</span>
+            </span>
+        </h1>
         <div class="row d-flex justify-content-center">
             @foreach($properties as $property)
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
@@ -18,10 +22,11 @@
                         </div>
                     </div>
                     <div class="card-content">
-                        <a href="#!">
-                            <h2 class="card-title">{{ $property->properties_name }}</h2>
-                            <p class="card-price">{{ $property->type }}</p>
-                            <p class="card-description">{{ $property->location }}</p>
+                        <a class="card-description">
+                            <p>{{ $property->properties_name }}</h2>
+                                <h2>{{ $property->type }}
+                            </p>
+                            <p>{{ $property->location }}</p>
                         </a>
                     </div>
                 </div>
@@ -31,12 +36,14 @@
     </div>
 </section>
 @include('segments.blueprints.blueprint')
+
+<!-- Inline JS -->
 <script>
     $(document).ready(function() {
 
         $('.card').delay(1800).queue(function(next) {
-            $(this).removeClass('overlay-hover');
-            $('overlay-hover').removeClass('overlay-hover');
+            $(this).removeClass('.card.hover');
+            $('overlay-hover.hover').removeClass('overlay-hover');
             next();
         });
     });

@@ -7,6 +7,11 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: BarlowCondensed;
+  src: url('../fonts/BarlowCondensed-Regular.ttf');
+}
+
 header {
   z-index: 1030;
 }
@@ -433,15 +438,25 @@ a:hover {
 /* End of header */
 
 /* List properties */
+
+#list-properties {
+  line-height: 3;
+  font-family: BarlowCondensed;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #10312b;
+}
+
 .card {
-	width: 100%;
-	margin: 1rem;
-	border-radius: 4px;
-	box-shadow: 0 -1px 1px 0 rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.2);
-	transition: all .2s ease;
-	background: #fff;
-	position: relative;
-	overflow: hidden;
+  width: 100%;
+  margin: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .05), 0 1px 2px 0 rgba(0, 0, 0, .2);
+  transition: all .2s ease;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  border: none;
 }
 
 .card.card-hover:hover {
@@ -454,15 +469,19 @@ a:hover {
   border-color: #ccb65e;
 }
 
-.card-img .overlay-content {
+.card-img {
+  position: relative;
+}
+
+.card-img:hover .overlay-card {
   background-color: rgba(25, 29, 38, .85);
   transition: opacity .2s ease;
   opacity: 1;
 }
 
-.card-img > img {
+.card-img>img {
   position: relative;
-  height: 224px;
+  height: auto;
   width: 100%;
   background-color: #fff;
   transition: opacity .2s ease;
@@ -482,10 +501,10 @@ a:hover {
 }
 
 .overlay-content {
-  line-height: 224px;
-  width: 100%;
-  text-align: center;
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .overlay-hover {
@@ -506,37 +525,31 @@ a:hover {
 }
 
 .card-content {
-  background: white;
-  align-self: end;
-  margin: .5rem .5rem 2rem;
-  padding: .5rem;
-  box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+  width: 100%;
+  min-height: 104px;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  transition: all .2s ease;
 }
 
-.card-title {
+.card-description h2 {
   font-size: 1.25rem;
   line-height: 1.1;
-  color: firebrick;
+  text-decoration: none;
+  color: #202927;
 }
 
-.card-price {
-  font-size: 1.75rem;
+.card-description p {
+  font-size: 1rem;
+  color: #113964;
+  font-weight: 500;
 }
 
-.stacked {
-  display: grid;
-}
-
-.stacked>* {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.card-img {
+/* .card-img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-}
+} */
 
 /* End of list properties*/
 
