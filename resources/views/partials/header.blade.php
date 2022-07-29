@@ -28,7 +28,7 @@
                     <a class="close-navbar-collapse d-lg-none d-flex justify-content-center" data-toggle="collapse" data-target="#ftco-nav, #site-main" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-times justify-content-center" aria-hidden="true"></i>
                     </a>
                     <li class="nav-item {{ ($title === "Home") ? 'active' : '' }}"><a href="/" class="nav-link">Home</a></li>
-                    <li class="nav-item {{ ($title === "Properties") ? 'active' : '' }}"><a href="/#list-properties" class="nav-link">Tipe Rumah</a></li>
+                    <li class="nav-item {{ ($title === "Properties") ? 'active' : '' }}"><a href="/#page-properties" class="nav-link">Tipe Rumah</a></li>
                     <li class="nav-item {{ ($title === "Contact Us") ? 'active' : '' }}"><a href="/contact-us" class="nav-link">Contact</a></li>
                 </ul>
             </div>

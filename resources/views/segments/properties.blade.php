@@ -1,6 +1,6 @@
-<section class="wp-block" style="background-color:#dcc7b7">
+<section id="page-a" style="background-color:#dcc7b7">
     <div class="container">
-        <h1 id="list-properties" class="text-center">
+        <h1 id="page-properties" class="page-title text-center">
             <span>
                 <span class="heading-content">Properties</span>
             </span>
