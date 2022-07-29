@@ -10,25 +10,25 @@
                         <span class="heading-content">Facilites</span>
                     </span>
                 </h1>
-                <div class="container row d-flex justify-content-center segs">
-                    <div class="row col-12">
-                        <div class="col-sm-6 col-md-4 icon-f">
-                            <i class="fa-solid fa-xl fa-person-swimming"></i>
+                <div class="row">
+                    <div class="container row d-flex justify-content-center col-12">
+                        <div class="col-6 col-lg-4 icon-f">
+                            <i class="fa-solid fa-person-swimming"></i>
                         </div>
-                        <div class="col-sm-6 col-md-4 icon-f">
-                            <i class="fa-solid fa-xl fa-dumbbell"></i>
+                        <div class="col-6 col-lg-4 icon-f">
+                            <i class="fa-solid fa-dumbbell"></i>
                         </div>
-                        <div class="col-sm-6 col-md-4 icon-f">
-                            <i class="fa-solid fa-xl fa-mug-hot"></i>
+                        <div class="col-6 col-lg-4 icon-f">
+                            <i class="fa-solid fa-mug-hot"></i>
                         </div>
-                        <div class="col-sm-6 col-md-4 icon-f">
-                            <i class="fa-solid fa-xl fa-cart-shopping"></i>
+                        <div class="col-6 col-lg-4 icon-f">
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </div>
-                        <div class="col-sm-6 col-md-4 icon-f">
-                            <i class="fa-solid fa-xl fa-person-walking"></i>
+                        <div class="col-6 col-lg-4 icon-f">
+                            <i class="fa-solid fa-person-walking"></i>
                         </div>
-                        <div class="col-sm-6 col-md-4 icon-f">
-                            <i class="fa-solid fa-xl fa-person-walking"></i>
+                        <div class="col-6 col-lg-4 icon-f">
+                            <i class="fa-solid fa-person-walking"></i>
                         </div>
                     </div>
                 </div>
