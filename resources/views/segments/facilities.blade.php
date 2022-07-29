@@ -1,27 +1,35 @@
-<section id="page-b" class="d-flex justify-content-center">
-    <div class="container container-facilities facilities-photos">
-        <div class="cf fp">
-            <div class="col-6 col-md-6 col-lg-6 ls-photos" data-aos="fade-right">
-                <div class="view overlay zoom">
-                    <img src="images/facilities-home/gym.jpg" class="img-fluid " alt="smaple image">
-                    <div class="mask flex-center">
-                        <p class="white-text">GYM</p>
-                    </div>
-                </div>
+<section id="page-b" class="d-flex justify-content-center" style="background-color:grey">
+    <div class="container">
+        <div class="container row d-flex justify-content-center">
+            <div class="container-fluid col-md-6 col-sm-12 content-facilities-left">
+                <img src="images/facilities-home/item-f.jpg" class="img-fluid" alt="smaple image">
             </div>
-            <div class="col-6 col-md-6 col-lg-6 ls-photos" data-aos="fade-up">
-                <div class="view overlay zoom">
-                    <img src="images/facilities-home/supermarket.jpg" class="img-fluid " alt="smaple image">
-                    <div class="mask flex-center">
-                        <p class="white-text">SUPERMARKET</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-12 ls-photos" data-aos="fade-bottom">
-                <div class="view overlay zoom">
-                    <img src="images/facilities-home/pool.jpg" class="img-fluid " alt="smaple image">
-                    <div class="mask flex-center">
-                        <p class="white-text">KOLAM RENANG</p>
+            <div class="container-fluid col-md-6 col-sm-12 content-facilities-right">
+                <h1 id="" class="page-title text-center">
+                    <span>
+                        <span class="heading-content">Facilites</span>
+                    </span>
+                </h1>
+                <div class="container row d-flex justify-content-center segs">
+                    <div class="row col-12">
+                        <div class="col-sm-6 col-md-4 icon-f">
+                            <i class="fa-solid fa-xl fa-person-swimming"></i>
+                        </div>
+                        <div class="col-sm-6 col-md-4 icon-f">
+                            <i class="fa-solid fa-xl fa-dumbbell"></i>
+                        </div>
+                        <div class="col-sm-6 col-md-4 icon-f">
+                            <i class="fa-solid fa-xl fa-mug-hot"></i>
+                        </div>
+                        <div class="col-sm-6 col-md-4 icon-f">
+                            <i class="fa-solid fa-xl fa-cart-shopping"></i>
+                        </div>
+                        <div class="col-sm-6 col-md-4 icon-f">
+                            <i class="fa-solid fa-xl fa-person-walking"></i>
+                        </div>
+                        <div class="col-sm-6 col-md-4 icon-f">
+                            <i class="fa-solid fa-xl fa-person-walking"></i>
+                        </div>
                     </div>
                 </div>
             </div>
