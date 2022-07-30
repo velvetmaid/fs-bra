@@ -1,4 +1,4 @@
-<section id="page-a" style="background-color:#dcc7b7">
+<section id="page-b" style="background-color:#dcc7b7">
     <div class="container">
         <h1 id="page-properties" class="page-title text-center">
             <span>
