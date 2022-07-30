@@ -15,9 +15,10 @@
 
   </head> -->
   
-<!-- Hapus semua comments  -->
+<!-- Hapus semua comments
+     File Di dalam tag <head></head> taro di file footer.php -->
 
-<footer>
+     <footer>
   <div class="container justify-content-center">
     <div class="main-content">
       <div class="left box">
