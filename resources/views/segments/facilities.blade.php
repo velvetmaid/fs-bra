@@ -17,7 +17,7 @@
                                 <i class="child-icon-fac fa-solid fa-3x fa-person-swimming"></i>
                             </div>
                             <div>
-                                <h3 class="icon-fac-title">HELLO</h3>
+                                <h3 class="icon-fac-title">Kolam Renang</h3>
                             </div>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                                 <i class="child-icon-fac fa-solid fa-3x fa-dumbbell"></i>
                             </div>
                             <div>
-                                <h3 class="icon-fac-title">HELLO</h3>
+                                <h3 class="icon-fac-title">Gym</h3>
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                                 <i class="child-icon-fac fa-solid fa-3x fa-mug-hot"></i>
                             </div>
                             <div>
-                                <h3 class="icon-fac-title">HELLO</h3>
+                                <h3 class="icon-fac-title">Caffe</h3>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                                 <i class="child-icon-fac fa-solid fa-3x fa-cart-shopping"></i>
                             </div>
                             <div>
-                                <h3 class="icon-fac-title">HELLO</h3>
+                                <h3 class="icon-fac-title">Supermarket</h3>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                                 <i class="child-icon-fac fa-solid fa-3x fa-person-walking"></i>
                             </div>
                             <div>
-                                <h3 class="icon-fac-title">HELLO</h3>
+                                <h3 class="icon-fac-title">Aerobic</h3>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                                 <i class="child-icon-fac fa-solid fa-3x fa-person-walking"></i>
                             </div>
                             <div>
-                                <h3 class="icon-fac-title">HELLO</h3>
+                                <h3 class="icon-fac-title">IDK</h3>
                             </div>
                         </div>
                     </div>
