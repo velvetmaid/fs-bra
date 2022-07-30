@@ -661,9 +661,7 @@ a:hover {
 
 /* End of carousel */
 
-/* Zoom efect */
-
-/* End Hover */
+/* Footer */
 
 footer * {
   margin: 0;
@@ -866,6 +864,8 @@ footer {
   background-color: rgb(80, 160, 0);
   border-color: rgb(80, 160, 0);
 }
+
+/* End of Footer */
 
 /* About */
 h6.contact-title {
