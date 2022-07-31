@@ -36,6 +36,12 @@ class PropertiesController extends Controller
             $properties->properties_image = $request->file('properties_image')->getClientOriginalName();
             $properties->save();
         }
+        if ($request->hasFile('properties_image')) {
+            $request->file('blueprint_image')->move('images/blueprint/', $request->file('blueprint_image')->getClientOriginalName());
+            $properties->blueprint_image = $request->file('blueprint_image')->getClientOriginalName();
+            $properties->save();
+        }
+
         return View::make('controls.admins.add-properties', ['successMsg' => 'Property is updated .']);
     }
 

@@ -10,11 +10,11 @@
                 <div class="container-fluid modal-layouts">
                     <div class="row">
                         <div class="modal-layout-left col-12 col-lg-6 mb-3">
-                            <img id="img" src="images/blueprint/3660 rumah.png" alt="" class="main-image w-100">
+                            <img id="img" src="{{ asset('images/properties-image/'.$property->properties_image) }}" alt="" class="main-image w-100">
                             <div class="row mt-3">
                                 <div class="col-3 col-sm-3 col-md-3 col-lg-3">
                                     <div class="child-product-thumbnail">
-                                        <img src="images/blueprint/3660 rumah.png" onclick='changeImage("images/blueprint/3660 rumah.png")' alt="" class="w-100 h-75 thumbnail-image">
+                                        <img src="{{ asset('images/blueprint/'.$property->blueprint_image) }}" onclick="myFunction(this)" alt="" class="w-100 h-75 thumbnail-image">
                                     </div>
                                 </div>
                                 <div class="col-3 col-sm-3 col-md-3 col-lg-3">
@@ -42,7 +42,7 @@
                                             <h1 class="modal-desc-text">{{ $property->properties_name }}</h1>
                                         </div>
                                         <div class="col-sm-10 card-block mx-auto text-center">
-                                            <p class="modal-desc-text">{{ $property->type }}</h1>
+                                            <p class="modal-desc-text">{{ $property->properties_description }}</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -61,3 +61,11 @@
     </div>
 </div>
 @endforeach
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("img");
+  expandImg.src = imgs.src;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
