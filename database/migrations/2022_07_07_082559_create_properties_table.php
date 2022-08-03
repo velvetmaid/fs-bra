@@ -18,8 +18,7 @@ return new class extends Migration
             $table->string('properties_name');
             $table->string('type');
             $table->string('location');
-            $table->string('properties_image');
-            $table->string('blueprint_image');
+            $table->text('image')->nullable();
             $table->string('properties_description');
             $table->string('price');
             $table->bigInteger('notelp');
