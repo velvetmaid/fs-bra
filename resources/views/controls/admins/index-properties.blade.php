@@ -7,15 +7,14 @@
 
 	<a href="/add-properties" class="btn btn-primary mb-1"><i class="fas fa-plus"></i> Tambah</a>
 
-	<table class="table table-bordered table-striped mt-3" id="table">
+	<table class="table table-bordered table-striped" id="table">
 		<thead>
 			<tr>
 				<th>No</th>
 				<th>Properties Name</th>
 				<th>Type</th>
 				<th>Location</th>
-				<th>Properties Image</th>
-				<th>Properties Descroption</th>
+				<th>Image</th>
 				<th>Price</th>
 				<th>No. Telp yang dapat di hubungi</th>
 				<th>Created</th>
@@ -30,8 +29,7 @@
 				<td>{{ $property->properties_name }}</td>
 				<td>{{ $property->type }}</td>
 				<td>{{ $property->location }}</td>
-				<td>{{ $property->properties_image }}</td>
-				<td>{{ $property->properties_description }}</td>
+				<td>{{ $property->image }}</td>
 				<td>{{ $property->price }}</td>
 				<td>{{ $property->notelp }}</td>
 				<td><?php echo date('d-m-y | H:i:s', strtotime($property['created_at'])); ?></td>
@@ -45,9 +43,15 @@
 					</form>
 				</td>
 			</tr>
-			@endforeach
 		</tbody>
 	</table>
+
+	<div class="container" style="border: 1px solid hotpink;">
+		<div>
+			<img src="{{ asset('$properties->image') }}" alt="">
+		</div>
+	</div>
+	@endforeach
 
 
 </div> <!-- container -->

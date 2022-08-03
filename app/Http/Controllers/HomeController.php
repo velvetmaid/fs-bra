@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use App\Models\Properties;
-use Spatie\FlareClient\View;
 
 
 class HomeController extends Controller

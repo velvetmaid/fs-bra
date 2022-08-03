@@ -1,33 +1,36 @@
 @include('controls/admins.outline.header')
 
 <div class="container mt-5">
+    @if(session('success'))
+    <div class="alert alert-dismissible alert-success">
+        <button type="button" class="btn-close" data-bs-dissmiss="alert"></button>
+        <h4>Success</h4>
+        <p class="mb-0">Was added Successfuly</p>
+    </div>
+    @endif
     <h1>Tambah Produk</h1>
     <hr>
-    <form action="/add-properties" method="POST" enctype="multipart/form-data">
+    <form action="/add-properties" method="POST" enctype="multipart/form-data" class="form">
         @csrf
         <div class="mb-3">
             <label for="properties_name" class="form-label">Properties Name</label>
-            <input type="text" class="form-control" id="properties_name" name="properties_name" placeholder="Tuliskan nama Produk" required>
+            <input type="text" class="form-control" id="properties_name" name="properties_name" placeholder="Tuliskan nama Produk">
         </div>
 
         <div class="mb-3">
             <label for="type" class="form-label">Type Home</label>
-            <input type="text" class="form-control" id="type" name="type" placeholder="Tuliskan nama Produk" required>
+            <input type="text" class="form-control" id="type" name="type" placeholder="Tuliskan nama Produk">
         </div>
 
         <div class="mb-3">
             <label for="location" class="form-label">Location</label>
-            <input type="text" class="form-control" id="location" name="location" placeholder="Tuliskan nama Produk" required>
+            <input type="text" class="form-control" id="location" name="location" placeholder="Tuliskan nama Produk">
         </div>
 
         <div class="mb-3">
-            <label for="properties_image" class="form-label">Properties Image</label>
-            <input type="file" class="form-control" id="properties_image" name="properties_image">
-        </div>
-
-        <div class="mb-3">
-            <label for="blueprint_image" class="form-label">Blueprint Image</label>
-            <input type="file" class="form-control" id="blueprint_image" name="blueprint_image">
+            <label for="image" class="form-label">Image</label>
+            <input type="file" class="form-control" accept="image/*" id="image" name="image[]" multiple>
+            <label class="custom-file-label" for="images">Choose image</label>
         </div>
 
         <div class="mb-3">

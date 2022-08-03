@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Properties;
 use Illuminate\Http\Request;
-use Illuminate\Foundation\Auth\RedirectsUsers;
 use Illuminate\Support\Facades\View;
 
 class PropertiesController extends Controller
@@ -28,21 +27,35 @@ class PropertiesController extends Controller
             ->with(compact('properties'));
     }
 
-    public function addproperties(Request $request)
+    public function addProperties(Request $request)
     {
-        $properties = Properties::create($request->all());
-        if ($request->hasFile('properties_image')) {
-            $request->file('properties_image')->move('images/properties-image/', $request->file('properties_image')->getClientOriginalName());
-            $properties->properties_image = $request->file('properties_image')->getClientOriginalName();
-            $properties->save();
-        }
-        if ($request->hasFile('properties_image')) {
-            $request->file('blueprint_image')->move('images/blueprint/', $request->file('blueprint_image')->getClientOriginalName());
-            $properties->blueprint_image = $request->file('blueprint_image')->getClientOriginalName();
-            $properties->save();
-        }
+        $validated = $request->validate([
+            'properties_name' => 'required',
+            'type' => 'required',
+            'location' => 'required',
+            'image.*' =>  'required|image|mimes:jpg,jpeg,png,gif|max:10240',
+            'properties_description' => 'required',
+            'price' => 'required',
+            'notelp' => 'required',
+        ]);
 
-        return View::make('controls.admins.add-properties', ['successMsg' => 'Property is updated .']);
+        $imgName = [];
+        foreach ($request->file('image') as $img) {
+            $filename = $img->getClientOriginalName();
+            $img->move(public_path() . '/images/blueprint', $filename);
+            $imgName[] = $filename;
+        }
+        $properties = new Properties();
+        $properties->properties_name = $request->properties_name;
+        $properties->type = $request->type;
+        $properties->location = $request->location;
+        $properties->properties_description = $request->properties_description;
+        $properties->price = $request->price;
+        $properties->notelp = $request->notelp;
+        $properties->image = json_encode($imgName);
+
+        $properties->save();
+        return back()->withSuccess('Great! Image has been successfully uploaded.');
     }
 
     public function updateproperties($id)

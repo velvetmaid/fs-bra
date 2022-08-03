@@ -60,6 +60,6 @@ Route::get('/', [PropertiesController::class, 'properties'])->name('properties')
 /* Index Control */
 Route::get('/index-properties', [PropertiesController::class, 'indexproperties'])->name('indexproperties');
 Route::get('/update-properties/{id}', [PropertiesController::class, 'updateproperties'])->name('updateproperties');
-Route::post('/add-properties', [PropertiesController::class, 'addproperties'])->name('addroperties');
+Route::post('/add-properties', [PropertiesController::class, 'addProperties'])->name('addProperties');
 Route::post('/update-data-properties/{id}', [PropertiesController::class, 'updatedataproperties'])->name('updatedataproperties');
 Route::delete('/properties/{id}', [PropertiesController::class, 'destroyproperties']);

@@ -12,7 +12,7 @@
                     <!-- Card hover -->
                     <div class="card-img" href="" data-target="#myModal{{$property->id}}" data-toggle="modal" role="document">
                         <!-- Card img -->
-                        <img src="{{ asset('images/properties-image/'.$property->properties_image) }}" alt="">
+                        <img src="{{ asset($property->image) }}" alt="">
                         <div class="overlay-card">
                             <!-- Overlay -->
                             <div class="overlay-content">
