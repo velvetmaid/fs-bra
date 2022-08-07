@@ -5,7 +5,7 @@
 	<hr>
 
 
-	<a href="/add-properties" class="btn btn-primary mb-1"><i class="fas fa-plus"></i> Tambah</a>
+	<a href="/add-properties" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah</a>
 
 	<table class="table table-bordered table-striped" id="table">
 		<thead>
@@ -15,8 +15,10 @@
 				<th>Type</th>
 				<th>Location</th>
 				<th>Image</th>
+				<th>Description</th>
 				<th>Price</th>
 				<th>No. Telp yang dapat di hubungi</th>
+				<th>Created</th>
 				<th>Created</th>
 			</tr>
 		</thead>
@@ -29,7 +31,11 @@
 				<td>{{ $property->properties_name }}</td>
 				<td>{{ $property->type }}</td>
 				<td>{{ $property->location }}</td>
-				<td>{{ $property->image }}</td>
+				<td>
+					<?php $property_images = json_decode($property->image); ?>
+					<img src="{{ asset('images/blueprint/'. $property_images[0]) }}" style="border: 1px solid hotpink; width:30px; height:30px;">
+				</td>
+				<td>{{ $property->properties_description }}</td>
 				<td>{{ $property->price }}</td>
 				<td>{{ $property->notelp }}</td>
 				<td><?php echo date('d-m-y | H:i:s', strtotime($property['created_at'])); ?></td>
@@ -44,14 +50,11 @@
 				</td>
 			</tr>
 		</tbody>
+		@endforeach
+
 	</table>
 
-	<div class="container" style="border: 1px solid hotpink;">
-		<div>
-			<img src="{{ asset('$properties->image') }}" alt="">
-		</div>
-	</div>
-	@endforeach
+
 
 
 </div> <!-- container -->
