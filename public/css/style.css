@@ -490,6 +490,7 @@ a:hover {
   position: relative;
   height: auto;
   width: 100%;
+  aspect-ratio: 1 / 1;
   background-color: #fff;
   transition: opacity .2s ease;
   background-position: center center;
@@ -505,6 +506,7 @@ a:hover {
   height: 100%;
   background-color: #fff;
   opacity: 0;
+  transition: .2s;
 }
 
 .overlay-content {
@@ -524,9 +526,11 @@ a:hover {
   border-radius: 20px;
   cursor: pointer;
   text-decoration: none;
+  transition: .2s;
 }
 
 .overlay-hover:hover {
+  transition: .2s;
   background: #ccb65e;
   border-color: #ccb65e;
 }
@@ -551,12 +555,6 @@ a:hover {
   color: #113964;
   font-weight: 500;
 }
-
-/* .card-img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-} */
 
 /* End of list properties*/
 
