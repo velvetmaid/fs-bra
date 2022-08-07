@@ -19,7 +19,10 @@
                                 </div>
                                 <div class="col-3 col-sm-3 col-md-3 col-lg-3">
                                     <div class="child-product-thumbnail">
-                                        <img src="images/blueprint/3660 sketch.png" onclick='changeImage("images/blueprint/3660 sketch.png")' alt="" class="w-100 h-75 thumbnail-image">
+                                        <?php $property_images = json_decode($property->image); ?>
+                                        @foreach ($property_images as $images)
+                                        <img src="{{ asset('images/blueprint/'. $images) }}" onclick='changeImage("images/blueprint/3660 sketch.png")' alt="" class="w-100 h-75 thumbnail-image">
+                                        @endforeach
                                     </div>
                                 </div>
                                 <div class="col-3 col-sm-3 col-md-3 col-lg-3">
@@ -63,9 +66,9 @@
 @endforeach
 
 <script>
-function myFunction(imgs) {
-  var expandImg = document.getElementById("img");
-  expandImg.src = imgs.src;
-  expandImg.parentElement.style.display = "block";
-}
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("img");
+        expandImg.src = imgs.src;
+        expandImg.parentElement.style.display = "block";
+    }
 </script>
