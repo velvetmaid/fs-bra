@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Properties extends Model
 {
-    use HasFactory;
-    protected $guarded = [];
+    protected $table = 'properties';
+    protected $fillable = [
+        'properties_name',
+        'type',
+        'location',
+        'image',
+        'properties_description',
+        'price',
+        'notelp'
+    ];
 }
