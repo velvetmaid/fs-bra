@@ -12,7 +12,8 @@
                     <!-- Card hover -->
                     <div class="card-img" href="" data-target="#myModal{{$property->id}}" data-toggle="modal" role="document">
                         <!-- Card img -->
-                        <img src="{{ asset($property->image) }}" alt="">
+                        <?php $property_images = json_decode($property->image); ?>
+                        <img class="img-card" src="{{ asset('images/blueprint/'. $property_images[0]) }}" alt="">
                         <div class="overlay-card">
                             <!-- Overlay -->
                             <div class="overlay-content">
