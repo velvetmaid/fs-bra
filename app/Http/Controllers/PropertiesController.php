@@ -45,16 +45,16 @@ class PropertiesController extends Controller
             $img->move(public_path() . '/images/blueprint', $filename);
             $imgName[] = $filename;
         }
-        $properties = new Properties();
-        $properties->properties_name = $request->properties_name;
-        $properties->type = $request->type;
-        $properties->location = $request->location;
-        $properties->properties_description = $request->properties_description;
-        $properties->price = $request->price;
-        $properties->notelp = $request->notelp;
-        $properties->image = json_encode($imgName);
+        $post = new Properties;
+        $post->properties_name = $request->properties_name;
+        $post->type = $request->type;
+        $post->location = $request->location;
+        $post->properties_description = $request->properties_description;
+        $post->price = $request->price;
+        $post->notelp = $request->notelp;
+        $post->image = json_encode($imgName);
 
-        $properties->save();
+        $post->save();
         return back()->withSuccess('Great! Image has been successfully uploaded.');
     }
 
