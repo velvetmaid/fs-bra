@@ -8,33 +8,20 @@
             </div>
             <section class="modal-body">
                 <div class="container-fluid modal-layouts">
+                    <?php $property_images = json_decode($property->image); ?>
                     <div class="row">
                         <div class="modal-layout-left col-12 col-lg-6 mb-3">
-                            <img id="img" src="{{ asset('images/properties-image/'.$property->properties_image) }}" alt="" class="main-image w-100">
+                            <div class="col-12 main-img-layout">
+                                <img id="mainImg" src="{{ asset('images/blueprint/'. $property_images[0]) }}" alt="" class="main-img">
+                            </div>
                             <div class="row mt-3">
+                                @foreach ($property_images as $images)
                                 <div class="col-3 col-sm-3 col-md-3 col-lg-3">
                                     <div class="child-product-thumbnail">
-                                        <img src="{{ asset('images/blueprint/'.$property->blueprint_image) }}" onclick="myFunction(this)" alt="" class="w-100 h-75 thumbnail-image">
+                                        <img src="{{ asset('images/blueprint/'. $images) }}" alt="" class="w-100 h-75 thumbnail-image preview">
                                     </div>
                                 </div>
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="child-product-thumbnail">
-                                        <?php $property_images = json_decode($property->image); ?>
-                                        @foreach ($property_images as $images)
-                                        <img src="{{ asset('images/blueprint/'. $images) }}" onclick='changeImage("images/blueprint/3660 sketch.png")' alt="" class="w-100 h-75 thumbnail-image">
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="child-product-thumbnail">
-                                        <img src="images/blueprint/8472 rumah.png" onclick='changeImage("images/blueprint/8472 rumah.png")' alt="" class="w-100 h-75 thumbnail-image">
-                                    </div>
-                                </div>
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
-                                    <div class="child-product-thumbnail">
-                                        <img src="images/blueprint/8472 sketch.png" onclick='changeImage("images/blueprint/8472 sketch.png")' alt="" class="w-100 h-75 thumbnail-image">
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="modal-layout-right col-12 col-lg-6 mb-3">
@@ -66,9 +53,9 @@
 @endforeach
 
 <script>
-    function myFunction(imgs) {
-        var expandImg = document.getElementById("img");
-        expandImg.src = imgs.src;
-        expandImg.parentElement.style.display = "block";
-    }
+    $('.preview').on('click',
+        function() {
+            $('#mainImg').prop('src',
+                this.src);
+        });
 </script>
