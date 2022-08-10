@@ -1,75 +1,80 @@
-<!-- <head>
+<!-- Remove the container if you want to extend the Footer to full width. -->
+  <footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">About company</h5>
 
-    {{-- Required meta tags --}}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    //Bootstrap
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-    //Font Awesome 5
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    //Font Awesome 4
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    // Font Awesome 6
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  </head> -->
-  
-<!-- Hapus semua comments
-     File Di dalam tag <head></head> taro di file footer.php -->
-
-     <footer>
-  <div class="container justify-content-center">
-    <div class="main-content">
-      <div class="left box">
-        <h2>INI LOGO</h2>
-        <div class="content">
-          <div class="social">
-            <a href="/"><img src="images/logo/le-casa-bonita.png" style="width: 15rem;" class="logo-control" /></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="left box">
-        <h2>About us</h2>
-        <div class="content">
           <p>
-            BELI RUMAH DIMARIH
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+            voluptatum deleniti atque corrupti.
           </p>
-          <div class="social">
-            <a href="https://facebook.com"><span class="fa fa-facebook"></span></a>
-            <a href="#"><span class="fa fa-twitter"></span></a>
-            <a href="https://instagram.com"><span class="fa fa-instagram"></span></a>
-            <a href="https://youtube.com"><span class="fa fa-youtube"></span></a>
-          </div>
-        </div>
-      </div>
 
-      <div class="center box">
-        <h2>Address</h2>
-        <div class="content">
-          <div class="place">
-            <span class="fas fa-map-marker-alt"></span>
-            <span class="text">Cikupa</span>
-          </div>
-          <div class="phone">
-            <span class="fas fa-phone-alt"></span>
-            <span class="text">02108888</span>
-          </div>
-          <div class="mail">
-            <span class="fas fa-envelope"></span>
-            <span class="text">main@mail.com</span>
+          <p>
+            Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+            molestias.
+          </p>
+
+          <div class="mt-4" style="padding-bottom: 1em ;">
+            <!-- Facebook -->
+            <a type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-facebook-f"></i></a>
+            <!-- Tiktok -->
+            <a type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-tiktok"></i></a>
+            <!-- Twitter -->
+            <a type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-twitter"></i></a>
+            <!-- Instagram -->
+            <a type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 pb-1">information</h5>
+
+          <div class="second">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Find US</h5>
+
+          <ul class="fa-ul" style="margin-left: 2em;">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-location-arrow"></i></span><span class="ms-2">CITRA RAYA BLOK M. 3/08. City: Banten.</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">bumirejekiagung@gmail.com</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 62 234 567 88</span>
+            </li>
+          </ul>
+
+        </div>
+        <!--Grid column-->
       </div>
+      <!--Grid row-->
     </div>
-    <div class="bottom">
-      <center>
-        <span class="credit">Created By
-          <a href="/">Copyright</a> |
-        </span>
-        <span class="far fa-copyright"></span><span> 2022 All rights reserved.</span>
-      </center>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-white" href="#">Le Casta Bonita</a>
     </div>
-  </div>
-</footer>
+    <!-- Copyright -->
+  </footer>
+
+<!-- End of .container -->
