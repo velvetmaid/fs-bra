@@ -10,7 +10,7 @@
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
                 <div class="card card-hover" data-aos="zoom-in">
                     <!-- Card hover -->
-                    <div class="card-img" data-toggle="modal" data-target="#myModal{{ $property->id }}">
+                    <div class="card-img">
                         <!-- Card img -->
                         <?php $property_images = json_decode($property->image); ?>
                         <img class="img-card" src="{{ asset('images/blueprint/'. $property_images[0]) }}" alt="">
@@ -18,7 +18,7 @@
                             <!-- Overlay -->
                             <div class="overlay-content">
                                 <!-- Overlay content -->
-                                <a class="overlay-hover" href="#!">View Detail</a>
+                                <a class="overlay-hover" data-toggle="modal" data-target="#myModal{{ $property->id }}" href="#myModal">View Detail</a>
                             </div>
                         </div>
                     </div>

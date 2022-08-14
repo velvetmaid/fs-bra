@@ -48,9 +48,9 @@
 				<td width=10%>
 					<a href="/update-properties/{{ $property->id }}"> <button class="btn btn-warning"><i class="fas fa-edit"></i> Edit</button></a>
 					<form action="{{ url('/properties', ['id' => $property->id]) }}" method="post">
-						<input class="btn btn-danger" type="submit" value="Delete" />
-						@method('delete')
 						@csrf
+						@method('delete')
+						<input class="btn btn-danger" type="submit" value="Delete" />
 					</form>
 				</td>
 			</tr>

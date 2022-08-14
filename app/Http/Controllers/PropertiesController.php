@@ -33,7 +33,8 @@ class PropertiesController extends Controller
             'properties_name' => 'required',
             'type' => 'required',
             'location' => 'required',
-            'image.*' =>  'required|image|mimes:jpg,jpeg,png,gif|max:10240',
+            'image' => 'required|array|min:2|max:4',
+            'image.*' => 'required|image|mimes:jpg,jpeg,png,gif|max:10240',
             'properties_description' => 'required',
             'price' => 'required',
             'notelp' => 'required',
@@ -42,7 +43,7 @@ class PropertiesController extends Controller
         $imgName = [];
         foreach ($request->file('image') as $img) {
             $filename = $img->getClientOriginalName();
-            $img->move(public_path() . '/images/blueprint', $filename);
+            $img->move(public_path() . '/images/blueprints', $filename);
             $imgName[] = $filename;
         }
         $post = new Properties;
@@ -70,7 +71,7 @@ class PropertiesController extends Controller
         $imgName = [];
         foreach ($request->file('image') as $img) {
             $filename = $img->getClientOriginalName();
-            $img->move(public_path() . '/images/blueprint', $filename);
+            $img->move(public_path() . '/images/blueprints', $filename);
             $imgName[] = $filename;
         }
         $properties->properties_name = $request->properties_name;
@@ -88,6 +89,7 @@ class PropertiesController extends Controller
     public function destroyProperties($id)
     {
         $properties = Properties::find($id);
+        
         $properties->delete();
         return redirect('index-properties')->with('deleteAlert', 'Great! Properties has been successfully deleted.');
     }

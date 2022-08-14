@@ -62,4 +62,4 @@ Route::get('/index-properties', [PropertiesController::class, 'indexProperties']
 Route::get('/update-properties/{id}', [PropertiesController::class, 'updateProperties'])->name('updateProperties');
 Route::post('/add-properties', [PropertiesController::class, 'addProperties'])->name('addProperties');
 Route::post('/update-data-properties/{id}', [PropertiesController::class, 'updateDataProperties'])->name('updateDataProperties');
-Route::delete('/properties/{id}', [PropertiesController::class, 'destroyProperties']);
+Route::delete('/properties/{id}', [PropertiesController::class, 'destroyProperties'])->name('destrotProperties');

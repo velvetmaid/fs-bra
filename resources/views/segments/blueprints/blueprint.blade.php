@@ -6,7 +6,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">TITLE HERE..</h5>
-                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             <div class="modal-body">
@@ -63,13 +63,13 @@
 @endforeach
 
 <!-- Inlne JS for onclick privew image -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     const change = src => {
-        document.getElementById('mainThumb'.id).src = src;
+        document.getElementById('mainThumb').src = src;
     }
-</script>
-<!-- <script>
+</script> -->
+<script>
     $('.preview').on('click', function() {
         $('.main-img').prop('src', this.src);
     });
-</script> -->
+</script>
