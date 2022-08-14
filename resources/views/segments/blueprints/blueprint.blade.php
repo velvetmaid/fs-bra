@@ -1,18 +1,22 @@
 @foreach($properties as $property)
-<div id="myModal{{$property->id}}" class="modal fade">
-    <div class="modal-dialog modal-xl">
+
+<div id="myModal{{ $property->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">TITLE HERE..</h5>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
             </div>
-            <section class="modal-body">
+
+            <div class="modal-body">
                 <div class="container-fluid modal-layouts">
                     <?php $property_images = json_decode($property->image); ?>
                     <div class="row">
+
                         <div class="modal-layout-left col-12 col-lg-6 mb-3">
                             <div class="col-12 main-img-layout">
-                                <img id="mainImg" src="{{ asset('images/blueprint/'. $property_images[0]) }}" alt="" class="main-img">
+                                <img id="mainThumb" src="{{ asset('images/blueprint/'. $property_images[0]) }}" data-image-id="$id" alt="" class="main-img">
                             </div>
                             <div class="row mt-3">
                                 @foreach ($property_images as $images)
@@ -24,6 +28,7 @@
                                 @endforeach
                             </div>
                         </div>
+
                         <div class="modal-layout-right col-12 col-lg-6 mb-3">
                             <div class="container-fluid spacing-top">
                                 <div class="row top-0 ">
@@ -41,21 +46,30 @@
                                 <button type="button" class="btn btn-primary btn-lg btn-block">Button</button>
                             </div>
                         </div>
+
                     </div>
                 </div>
-            </section>
+            </div>
+
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
+
         </div>
     </div>
+
 </div>
+
 @endforeach
 
-<script>
-    $('.preview').on('click',
-        function() {
-            $('#mainImg').prop('src',
-                this.src);
-        });
+<!-- Inlne JS for onclick privew image -->
+<script type="text/javascript">
+    const change = src => {
+        document.getElementById('mainThumb'.id).src = src;
+    }
 </script>
+<!-- <script>
+    $('.preview').on('click', function() {
+        $('.main-img').prop('src', this.src);
+    });
+</script> -->

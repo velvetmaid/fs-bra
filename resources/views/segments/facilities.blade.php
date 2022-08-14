@@ -2,7 +2,7 @@
     <div class="container">
         <div class="container row d-flex justify-content-center">
             <div class="container-fluid col-md-6 col-sm-12 content-facilities-left">
-                <img src="images/facilities-home/item-f.jpg" class="img-fluid" alt="smaple image">
+                <img src="images/facilities-img/bg-right.jpg" class="img-fluid" alt="smaple image">
             </div>
             <div class="container-fluid col-md-6 col-sm-12 content-facilities-right">
                 <h1 id="page-facilities" class="page-title text-center">

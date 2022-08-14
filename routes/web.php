@@ -58,8 +58,8 @@ Route::get('/redirects', [HomeController::class, 'rolesauth']);
 /* Index Home Web */
 Route::get('/', [PropertiesController::class, 'properties'])->name('properties');
 /* Index Control */
-Route::get('/index-properties', [PropertiesController::class, 'indexproperties'])->name('indexproperties');
-Route::get('/update-properties/{id}', [PropertiesController::class, 'updateproperties'])->name('updateproperties');
+Route::get('/index-properties', [PropertiesController::class, 'indexProperties'])->name('indexProperties');
+Route::get('/update-properties/{id}', [PropertiesController::class, 'updateProperties'])->name('updateProperties');
 Route::post('/add-properties', [PropertiesController::class, 'addProperties'])->name('addProperties');
-Route::post('/update-data-properties/{id}', [PropertiesController::class, 'updatedataproperties'])->name('updatedataproperties');
-Route::delete('/properties/{id}', [PropertiesController::class, 'destroyproperties']);
+Route::post('/update-data-properties/{id}', [PropertiesController::class, 'updateDataProperties'])->name('updateDataProperties');
+Route::delete('/properties/{id}', [PropertiesController::class, 'destroyProperties']);

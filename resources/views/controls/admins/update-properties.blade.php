@@ -2,8 +2,7 @@
 
 <div class="container mt-5">
     <h1>Update Produk</h1>
-    <hr>
-
+    
     <form action="/update-data-properties/{{ $properties->id }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
@@ -22,13 +21,9 @@
         </div>
 
         <div class="mb-3">
-            <label for="properties_image" class="form-label">Properties Image</label>
-            <input type="file" class="form-control" id="properties_image" name="properties_image" value="{{ $properties->properties_image }}"> 
-        </div>
-
-        <div class="mb-3">
-            <label for="blueprint_image" class="form-label">Blueprint Image</label>
-            <input type="file" class="form-control" id="blueprint_image" name="blueprint_image" value="{{ $properties->blueprint_image }}">
+            <label for="image" class="form-label">Image</label>
+            <input type="file" class="form-control" accept="image/*" id="image" name="image[]" multiple value="{{ $properties->image }}">
+            <label class="custom-file-label" for="images">Choose image</label>
         </div>
 
         <div class="mb-3">
