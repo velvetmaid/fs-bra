@@ -18,7 +18,7 @@ class PropertiesController extends Controller
             ->with(compact('properties'));
     }
 
-    public function indexproperties()
+    public function indexProperties()
     {
         $title = 'Detail Properties';
         $properties = Properties::all();
@@ -55,27 +55,40 @@ class PropertiesController extends Controller
         $post->image = json_encode($imgName);
 
         $post->save();
-        return back()->withSuccess('Great! Image has been successfully uploaded.');
+        return back()->withSuccess('Great! Properties has been successfully uploaded.');
     }
 
-    public function updateproperties($id)
+    public function updateProperties($id)
     {
-
         $properties = Properties::find($id);
         return View('controls.admins.update-properties', compact('properties'));
     }
 
-    public function updatedataproperties(Request $request, $id)
+    public function updateDataProperties(Request $request, $id)
     {
         $properties = Properties::find($id);
-        $properties->update($request->all());
-        return redirect()->route('indexproperties')->with('success');
+        $imgName = [];
+        foreach ($request->file('image') as $img) {
+            $filename = $img->getClientOriginalName();
+            $img->move(public_path() . '/images/blueprint', $filename);
+            $imgName[] = $filename;
+        }
+        $properties->properties_name = $request->properties_name;
+        $properties->type = $request->type;
+        $properties->location = $request->location;
+        $properties->properties_description = $request->properties_description;
+        $properties->price = $request->price;
+        $properties->notelp = $request->notelp;
+        $properties->image = json_encode($imgName);
+
+        $properties->save();
+        return redirect('index-properties')->with('updateAlert', 'Great! Properties has been successfully uptodate.');
     }
 
-    public function destroyproperties($id)
+    public function destroyProperties($id)
     {
         $properties = Properties::find($id);
         $properties->delete();
-        return redirect('index-properties')->with('success', 'Data telah dihapus.');
+        return redirect('index-properties')->with('deleteAlert', 'Great! Properties has been successfully deleted.');
     }
 }
