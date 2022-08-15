@@ -13,12 +13,12 @@
                     <div class="card-img">
                         <!-- Card img -->
                         <?php $property_images = json_decode($property->image); ?>
-                        <img class="img-card" src="{{ asset('images/blueprint/'. $property_images[0]) }}" alt="">
+                        <img class="img-card" src="{{ asset('images/blueprints/'. $property_images[0]) }}" alt="{{ $property->image }}">
                         <div class="overlay-card">
                             <!-- Overlay -->
                             <div class="overlay-content">
                                 <!-- Overlay content -->
-                                <a class="overlay-hover" data-toggle="modal" data-target="#myModal{{ $property->id }}" href="#myModal">View Detail</a>
+                                <a class="overlay-hover" data-toggle="modal" data-target="#myModal{{ $property->id }}" data-backdrop="static" data-keyboard="false" href="#myModal">View Detail</a>
                             </div>
                         </div>
                     </div>

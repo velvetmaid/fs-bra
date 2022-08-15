@@ -39,7 +39,7 @@
 				<td>{{ $property->location }}</td>
 				<td>
 					<?php $property_images = json_decode($property->image); ?>
-					<img src="{{ asset('images/blueprint/'. $property_images[0]) }}" style="border: 1px solid hotpink; width:30px; height:30px;">
+					<img src="{{ asset('images/blueprints/'. $property_images[0]) }}" style="border: 1px solid hotpink; width:30px; height:30px;">
 				</td>
 				<td>{{ $property->properties_description }}</td>
 				<td>{{ $property->price }}</td>

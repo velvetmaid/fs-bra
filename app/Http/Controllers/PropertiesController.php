@@ -17,7 +17,7 @@ class PropertiesController extends Controller
             ->with('title', $title)
             ->with(compact('properties'));
     }
-
+    
     public function indexProperties()
     {
         $title = 'Detail Properties';
@@ -89,7 +89,6 @@ class PropertiesController extends Controller
     public function destroyProperties($id)
     {
         $properties = Properties::find($id);
-        
         $properties->delete();
         return redirect('index-properties')->with('deleteAlert', 'Great! Properties has been successfully deleted.');
     }
