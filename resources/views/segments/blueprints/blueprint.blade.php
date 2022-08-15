@@ -3,33 +3,32 @@
 <div id="myModal{{ $property->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
     <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
+        <div class="modal-content modal-bg">
             <div class="modal-header">
-                <h5 class="modal-title">TITLE HERE..</h5>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title">{{ $property->properties_name  }}</h5>
+                <button type="button" class="close" onclick="history.go(0)" data-dismiss="modal">&times;</button>
             </div>
-
             <div class="modal-body">
                 <div class="container-fluid modal-layouts">
-                    <?php $property_images = json_decode($property->image); ?>
                     <div class="row">
 
-                        <div class="modal-layout-left col-12 col-lg-6 mb-3">
+                        <div class="modal-layout-left col-12 col-lg-7 mb-3">
                             <div class="col-12 main-img-layout">
-                                <img id="mainThumb" src="{{ asset('images/blueprint/'. $property_images[0]) }}" data-image-id="$id" alt="" class="main-img">
+                                <?php $property_images = json_decode($property->image); ?>
+                                <img id="mainThumb" src="{{ asset('images/blueprints/'. $property_images[0]) }}" alt="" class="main-img">
                             </div>
-                            <div class="row mt-3">
+                            <div class="row preview-main-img">
                                 @foreach ($property_images as $images)
                                 <div class="col-3 col-sm-3 col-md-3 col-lg-3">
                                     <div class="child-product-thumbnail">
-                                        <img src="{{ asset('images/blueprint/'. $images) }}" alt="" class="w-100 h-75 thumbnail-image preview">
+                                        <img id="childThumb" src="{{ asset('images/blueprints/'. $images) }}" alt="{{ $property->image }}" class="thumbnail-image preview" onclick="showImage=this.src">
                                     </div>
                                 </div>
                                 @endforeach
                             </div>
                         </div>
 
-                        <div class="modal-layout-right col-12 col-lg-6 mb-3">
+                        <div class="modal-layout-right col-12 col-lg-5 mb-3">
                             <div class="container-fluid spacing-top">
                                 <div class="row top-0 ">
                                     <div class="col-sm-12 my-auto top-3">
@@ -43,16 +42,13 @@
                                 </div>
                             </div>
                             <div class="container-fluid spacing-bottom">
-                                <button type="button" class="btn btn-primary btn-lg btn-block">Button</button>
+                                <button type="button" class="btn btn-tertiary btn-lg btn-block text-center">
+                                    <i class="fa-brands fa-whatsapp"></i>Hubungi</button>
                             </div>
                         </div>
 
                     </div>
                 </div>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
 
         </div>
@@ -64,7 +60,7 @@
 
 <!-- Inlne JS for onclick privew image -->
 <!-- <script type="text/javascript">
-    const change = src => {
+    const showImage = src => {
         document.getElementById('mainThumb').src = src;
     }
 </script> -->

@@ -12,6 +12,11 @@ html {
   src: url('../fonts/BarlowCondensed-Regular.ttf');
 }
 
+@font-face {
+  font-family: PoppinsReguler;
+  src: url('../fonts/Poppins-Regular.ttf');
+}
+
 header {
   z-index: 1030;
 }
@@ -24,7 +29,6 @@ body {
   margin: 0;
 }
 
-.row,
 .container-fluid {
   padding: 0;
   margin: 0;
@@ -558,6 +562,41 @@ a.overlay-hover {
 
 /* End of list properties*/
 
+/* Blueprints */
+
+.preview-main-img {
+  padding-top: 2rem;
+}
+
+.preview {
+  width: 100%;
+  object-fit: cover;
+}
+
+.btn-tertiary {
+  color: #fff;
+  background: #48da79;
+  border-color: #48da79;
+  font-family: PoppinsRegular Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.btn-tertiary:hover {
+  color: #fff;
+  border-color: #28c75d;
+  background: #28c75d;
+}
+
+.fa-whatsapp {
+  font-size: 25px;
+  margin-right: .5rem;
+  justify-content: start;
+}
+
+/* End of blueprints */
+
 /* Facilites */
 
 .content-facilities-left {
@@ -622,10 +661,23 @@ a.overlay-hover {
 
 /* Pop up */
 
+.modal-header {
+  border-bottom: none;
+  padding: 0;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+
+.modal-bg {
+  background: #f9eaf2;
+  border-radius: 15px;
+}
+
 .main-img-layout {
   padding: 0;
   border: 1px solid salmon;
-  height: 50%;
+  height: 80%;
   text-align: center;
 }
 
