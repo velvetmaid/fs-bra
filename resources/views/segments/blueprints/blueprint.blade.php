@@ -19,16 +19,16 @@
                             </div>
                             <div class="row preview-main-img">
                                 @foreach ($property_images as $images)
-                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                                <div class="col-6 col-md-3 col-lg-3">
                                     <div class="child-product-thumbnail">
-                                        <img id="childThumb" src="{{ asset('images/blueprints/'. $images) }}" alt="{{ $property->image }}" class="thumbnail-image preview" onclick="showImage=this.src">
+                                        <img id="childThumb" src="{{ asset('images/blueprints/'. $images) }}" alt="{{ $property->image }}" class="preview">
                                     </div>
                                 </div>
                                 @endforeach
                             </div>
                         </div>
 
-                        <div class="modal-layout-right col-12 col-lg-5 mb-3">
+                        <div class="modal-layout-right col-12 col-lg-5">
                             <div class="container-fluid spacing-top">
                                 <div class="row top-0 ">
                                     <div class="col-sm-12 my-auto top-3">
@@ -65,7 +65,7 @@
     }
 </script> -->
 <script>
-    $('.preview').on('click', function() {
-        $('.main-img').prop('src', this.src);
+    $(".preview").on('click', function() {
+        $(".main-img").prop('src', this.src);
     });
 </script>
