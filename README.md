@@ -25,14 +25,40 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Install
 
-- Run : $ git clone https://github.com/camieuxgoofy/cp-bra.git
-- Go to the folder application using $ cd 'YOUR PATH DIRECTORY' command on your cmd or terminal
-- Run : $ composer install on your cmd or terminal
-- Copy .env.example file to .env on the root folder. You can type $ copy .env.example .env if using command prompt Windows or $ cp .env.example .env if using terminal Ubuntu
-- Open your .env file and change the database name (DB_DATABASE) to whatever you have, username (DB_USERNAME) and password (DB_PASSWORD) field correspond to your configuration.
-- Run : $ php artisan key:generate
-- Run : $ php artisan migrate
-- Run : $ php artisan serve
+#### 1. Clone 
+```ruby
+git clone https://github.com/camieuxgoofy/cp-bra.git
+```
+#### 2. Go to the folder application using $ cd 'YOUR PATH DIRECTORY' command on your cmd or terminal
+#### 3. Composer install on your cmd or terminal
+```ruby
+composer install
+```
+#### 4. Copy ```.env.example``` file to ```.env``` on the root folder.
+###### Windows
+```ruby 
+copy .env.example .env
+``` 
+###### Ubuntu
+```ruby 
+cp .env.example .env
+``` 
+#### 5. Open your ```.env``` file and change the database name (DB_DATABASE) to whatever you have, username (DB_USERNAME) and password (DB_PASSWORD) field correspond to your configuration.
+#### 6. Run :
+```ruby
+php artisan key:generate
+```
+#### 7. Creating a schema :
+```ruby 
+php artisan migrate
+```
+#### 8. Running applications :
+```ruby
+php artisan serve
+```
+##### http://127.0.0.1:8000
+
+
 
 ## License
 
