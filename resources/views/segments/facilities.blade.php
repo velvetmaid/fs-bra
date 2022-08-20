@@ -11,7 +11,7 @@
                     </span>
                 </h1>
                 <div class="row-item-fac row d-flex justify-content-center col-12">
-                    <div class="shadow mb-5 col-6 col-lg-4 p-1 parent-icon-fac">
+                    <div class="shadow col-4 p-1 parent-icon-fac">
                         <div class="item-fac">
                             <div class="icon-warp">
                                 <i class="child-icon-fac fa-solid fa-3x fa-person-swimming"></i>
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shadow mb-5 col-6 col-lg-4 p-1 parent-icon-fac">
+                    <div class="shadow col-4 p-1 parent-icon-fac">
                         <div class="item-fac">
                             <div class="icon-warp">
                                 <i class="child-icon-fac fa-solid fa-3x fa-dumbbell"></i>
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shadow mb-5 col-6 col-lg-4 p-1 parent-icon-fac">
+                    <div class="shadow col-4 p-1 parent-icon-fac">
                         <div class="item-fac">
                             <div class="icon-warp">
                                 <i class="child-icon-fac fa-solid fa-3x fa-mug-hot"></i>
@@ -41,7 +41,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shadow mb-5 col-6 col-lg-4 p-1 parent-icon-fac">
+                    <div class="shadow col-4 p-1 parent-icon-fac">
                         <div class="item-fac">
                             <div class="icon-warp">
                                 <i class="child-icon-fac fa-solid fa-3x fa-cart-shopping"></i>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shadow mb-5 col-6 col-lg-4 p-1 parent-icon-fac">
+                    <div class="shadow col-4 p-1 parent-icon-fac">
                         <div class="item-fac">
                             <div class="icon-warp">
                                 <i class="child-icon-fac fa-solid fa-3x fa-person-walking"></i>
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shadow mb-5 col-6 col-lg-4 p-1 parent-icon-fac">
+                    <div class="shadow col-4 p-1 parent-icon-fac">
                         <div class="item-fac">
                             <div class="icon-warp">
                                 <i class="child-icon-fac fa-solid fa-3x fa-person-walking"></i>

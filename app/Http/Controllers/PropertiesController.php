@@ -33,7 +33,7 @@ class PropertiesController extends Controller
             'properties_name' => 'required',
             'type' => 'required',
             'location' => 'required',
-            'image' => 'required|array|min:2|max:4',
+            'image' => 'required|array',
             'image.*' => 'required|image|mimes:jpg,jpeg,png,gif|max:10240',
             'properties_description' => 'required',
             'price' => 'required',

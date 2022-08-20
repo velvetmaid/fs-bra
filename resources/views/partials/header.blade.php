@@ -25,7 +25,7 @@
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav m-auto">
-                    <a class="close-navbar-collapse d-lg-none d-flex justify-content-center" data-toggle="collapse" data-target="#ftco-nav, #site-main" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-times justify-content-center" aria-hidden="true"></i>
+                    <a class="close-navbar-collapse d-lg-none" data-toggle="collapse" data-target="#ftco-nav, #site-main" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-times justify-content-center" aria-hidden="true"></i>
                     </a>
                     <li class="nav-item {{ ($title === "Home") ? 'active' : '' }}"><a href="/" class="nav-link">Home</a></li>
                     <li class="nav-item {{ ($title === "Properties") ? 'active' : '' }}"><a href="/#page-properties" class="nav-link">Properties</a></li>

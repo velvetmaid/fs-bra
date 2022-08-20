@@ -6,37 +6,36 @@
         <div class="modal-content modal-bg">
             <div class="modal-header">
                 <h5 class="modal-title">{{ $property->properties_name  }}</h5>
-                <button type="button" class="close" onclick="history.go(0)" data-dismiss="modal">&times;</button>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="container-fluid modal-layouts">
                     <div class="row">
 
                         <div class="modal-layout-left col-12 col-lg-7 mb-3">
-                            <div class="col-12 main-img-layout">
-                                <?php $property_images = json_decode($property->image); ?>
-                                <img id="mainThumb" src="{{ asset('images/blueprints/'. $property_images[0]) }}" alt="" class="main-img">
-                            </div>
                             <div class="row preview-main-img">
-                                @foreach ($property_images as $images)
-                                <div class="col-6 col-md-3 col-lg-3">
-                                    <div class="child-product-thumbnail">
-                                        <img id="childThumb" src="{{ asset('images/blueprints/'. $images) }}" alt="{{ $property->image }}" class="preview">
+                                @php
+                                $property_images = json_decode($property->image);
+                                @endphp
+                                <div class="container">
+                                    <div class="fotorama" data-logo="true" data-allowfullscreen="true" data-autoplay="true" data-nav="thumbs" data-thumbwidth="110.5" data-thumbheight="66" data-thumbmargin="10" data-thumbborderwidth="4" data-width="850" data-height="550">
+                                        @foreach ($property_images as $img)
+                                        <img src="{{ asset('images/blueprints/'. $img) }}" alt="{{ $property->image }}" class="" width="144" height="96">
+                                        @endforeach
                                     </div>
                                 </div>
-                                @endforeach
                             </div>
                         </div>
 
                         <div class="modal-layout-right col-12 col-lg-5">
                             <div class="container-fluid spacing-top">
                                 <div class="row top-0 ">
-                                    <div class="col-sm-12 my-auto top-3">
-                                        <div class="col-sm-10 card-block mx-auto text-center">
+                                    <div class="col-sm-12 my-auto top-3 h-100 d-inline-block">
+                                        <div class="col-sm-12 card-block mx-auto text-center">
                                             <h1 class="modal-desc-text">{{ $property->properties_name }}</h1>
                                         </div>
-                                        <div class="col-sm-10 card-block mx-auto text-center">
-                                            <p class="modal-desc-text">{{ $property->properties_description }}</h1>
+                                        <div class="col-sm-12 card-block mx-auto text-center">
+                                            <h1 class="modal-desc-text">{{ $property->properties_description }}</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -45,27 +44,14 @@
                                 <button type="button" class="btn btn-tertiary btn-lg btn-block text-center">
                                     <i class="fa-brands fa-whatsapp"></i>Hubungi</button>
                             </div>
-                        </div>
+                        </div> 
 
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
 </div>
 
 @endforeach
-
-<!-- Inlne JS for onclick privew image -->
-<!-- <script type="text/javascript">
-    const showImage = src => {
-        document.getElementById('mainThumb').src = src;
-    }
-</script> -->
-<script>
-    $(".preview").on('click', function() {
-        $(".main-img").prop('src', this.src);
-    });
-</script>
