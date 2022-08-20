@@ -29,28 +29,14 @@ body {
   margin: 0;
 }
 
-.container-fluid {
+.container-fluid,
+.row {
   padding: 0;
   margin: 0;
 }
 
-.wp-block {
-  position: relative;
-}
-
 .fa-bars {
   color: #006000;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-a:hover {
-  color: #0056b3;
-  text-decoration: underline;
 }
 
 #primary-container {
@@ -106,20 +92,12 @@ a:hover {
   box-shadow: none !important;
 }
 
-.navbar-brand,
-.navbar-brand.span {
-  padding-top: 6%;
+.navbar-brand {
+  margin: 0;
   white-space: nowrap;
   color: #000;
-  margin-left: 16px;
   text-transform: uppercase;
   font-weight: 900;
-  justify-content: center;
-}
-
-.navbar-brand:hover,
-.navbar-brand:focus {
-  text-decoration: none;
 }
 
 .navbar-nav {
@@ -133,22 +111,6 @@ a:hover {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-}
-
-.navbar-nav .nav-link {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.navbar-nav .dropdown-menu {
-  position: static;
-  float: none;
-}
-
-.navbar-text {
-  display: inline-block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 @media (max-width: 992px) {
@@ -165,7 +127,7 @@ a:hover {
     z-index: 1030;
   }
 
-  .navbar-collapse.collapsing {
+  .navbar-collapse {
     right: -70%;
     transition: height 0s ease;
   }
@@ -282,14 +244,6 @@ a:hover {
   transition: 0.3s;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:before {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-}
-
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
   color: #228B22;
 }
@@ -306,36 +260,12 @@ a:hover {
     padding-bottom: .7rem;
   }
 
-  .ftco-navbar-light .navbar-nav>.nav-item>.nav-link:hover {
-    color: #005c09;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-}
-
-.ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu {
-  border: none;
-  background: #fff;
-  -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
-  -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
-  box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
-  border-radius: 4px;
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu .dropdown-item:hover,
 .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu .dropdown-item:focus {
   background: #228B22;
   color: #fff;
-}
-
-.ftco-navbar-light .navbar-nav>.nav-item.cta>a {
-  color: #fff;
-  background: #228B22;
-  border-radius: 0px;
 }
 
 @media (max-width: 767.98px) {
@@ -355,12 +285,6 @@ a:hover {
 
 .ftco-navbar-light .navbar-nav>.nav-item.active>a {
   color: #228B22;
-}
-
-@media (max-width: 991.98px) {
-  .ftco-navbar-light .navbar-nav> {
-    color: #fff;
-  }
 }
 
 .ftco-navbar-light .navbar-toggler {
@@ -388,46 +312,8 @@ a:hover {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.navbar-brand:hover,
-.navbar-brand:focus {
+.navbar-brand:hover {
   color: #000;
-}
-
-.social-media {
-  display: inline-block;
-}
-
-@media (max-width: 991.98px) {
-  .social-media {
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .social-media {
-    margin-bottom: 20px;
-  }
-}
-
-.social-media p a {
-  border: 1px solid #e6e6e6;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 4px;
-}
-
-.social-media p a span {
-  color: #4d4d4d;
-}
-
-.social-media p a:hover {
-  background: #228B22;
-  border-color: #228B22;
-}
-
-.social-media p a:hover span {
-  color: #fff;
 }
 
 .logo {
@@ -447,7 +333,6 @@ a:hover {
 #page-b,
 #page-c {
   padding-bottom: 100px;
-  padding-top: 100px;
 }
 
 .page-title {
@@ -494,12 +379,11 @@ a:hover {
   position: relative;
   height: auto;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 2;
   background-color: #fff;
   transition: opacity .2s ease;
   background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .overlay-card {
@@ -637,6 +521,13 @@ a.overlay-hover {
   height: 40px;
 }
 
+@media (max-width: 992px) {
+  .btn-tertiary {
+    position: relative;
+    margin-top: 15px;
+  }
+}
+
 .btn-tertiary:hover {
   color: #fff;
   border-color: #28c75d;
@@ -659,6 +550,7 @@ a.overlay-hover {
 
 .row-item-fac {
   align-self: center;
+  gap: 50px;
 }
 
 @media (min-width: 992px) {
