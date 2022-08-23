@@ -1,10 +1,9 @@
-<div id="primary-container" class="container-fluid"> <!-- Wrapper -->
+<div id="primary-container" class="container-fluid">
     <main id="main" class="site-main">
         <article>
-            @yield('container')
+            @yield('main')
+            @yield('about')
+            @yield('contact')
         </article>
     </main>
-    <button class="btn btn-secondary scroll-top" data-scroll="up" type="button">
-        <i class="fas fa-chevron-up fa-fw"></i>
-    </button>
-</div> <!-- End of wrapper -->
+</div>

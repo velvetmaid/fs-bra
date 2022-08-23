@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('container')
+@section('main')
 
 @include('segments.carousel')
 @include('segments.properties')

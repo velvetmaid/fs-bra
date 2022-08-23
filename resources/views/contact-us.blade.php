@@ -1,8 +1,7 @@
 @extends('layouts.main')
 
-
-@section('container')
-<div class="container-about">
+@section('contact')
+<div class="container container-about">
   <div class="content-about">
     <div class="left-content-about">
       <div class="top-left-content-about">
@@ -34,7 +33,7 @@
     </div>
   </div>
   <div class="google-maps">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9432.970702244756!2d106.52579103234721!3d-6.25376688858329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e420766f2e519a9%3A0xcf05128d6363176a!2zNsKwMTUnMDMuOSJTIDEwNsKwMzEnMzUuNyJF!5e0!3m2!1sen!2sid!4v1656995166949!5m2!1sen!2sid&z=7" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9432.970702244756!2d106.52579103234721!3d-6.25376688858329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e420766f2e519a9%3A0xcf05128d6363176a!2zNsKwMTUnMDMuOSJTIDEwNsKwMzEnMzUuNyJF!5e0!3m2!1sen!2sid!4v1656995166949!5m2!1sen!2sid&z=7" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </div>
 @endsection

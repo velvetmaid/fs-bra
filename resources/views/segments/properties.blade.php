@@ -12,7 +12,7 @@
                     <!-- Card hover -->
                     <div class="card-img">
                         <!-- Card img -->
-                        <?php $property_images = json_decode($property->image); ?>
+                        @php $property_images = json_decode($property->image); @endphp
                         <img class="img-card" src="{{ asset('images/blueprints/'. $property_images[0]) }}" alt="{{ $property->image }}">
                         <div class="overlay-card">
                             <!-- Overlay -->

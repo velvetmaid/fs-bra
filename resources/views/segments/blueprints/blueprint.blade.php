@@ -1,7 +1,6 @@
 @foreach($properties as $property)
 
 <div id="myModal{{ $property->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content modal-bg">
             <div class="modal-header">
@@ -11,7 +10,6 @@
             <div class="modal-body">
                 <div class="container-fluid modal-layouts">
                     <div class="row">
-
                         <div class="modal-layout-left col-12 col-lg-7 mb-3">
                             <div class="row preview-main-img">
                                 @php
@@ -44,14 +42,12 @@
                                 <button type="button" class="btn btn-tertiary btn-lg btn-block text-center">
                                     <i class="fa-brands fa-whatsapp"></i>Hubungi</button>
                             </div>
-                        </div> 
-
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 
 @endforeach
