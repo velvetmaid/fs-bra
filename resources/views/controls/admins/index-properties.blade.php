@@ -1,64 +1,51 @@
 @include('controls/admins.outline.header')
 
-<!-- Update Alert -->
-@if (session('updateAlert'))
-<div class="alert alert-success"> {{ session('updateAlert') }} </div>
-@endif
-<!-- End Alert -->
+<div class="table-users">
+   <div class="header">Users
+      <div class="d-flex justify-content-end">
+         <a href="/add-properties" class="btn btn-primary ">
+            <i class="fas fa-plus">
+            </i>
+         </a>
+      </div>
+   </div>
 
-<div class="container mt-3">
-	<h1 class="tabel1"><strong>Data Produk</strong></h1>
-	<a href="/add-properties" class="btn btn-primary">
-		<i class="fas fa-plus">
-		</i> Tambah
-	</a>
+   <table cellspacing="0">
 
-	<table class="table table-bordered table-striped" id="table">
-		<thead>
-			<tr style="text-align: center;">
-				<th>No</th>
-				<th>Properties Name</th>
-				<th>Type</th>
-				<th>Location</th>
-				<th>Image</th>
-				<th>Description</th>
-				<th>Price</th>
-				<th>No. Telp</th>
-				<th>Created</th>
-				<th>Option</th>
-			</tr>
-		</thead>
+      <tr>
+         <th>Picture</th>
+         <th>Name</th>
+         <th>Location</th>
+         <th>Phone</th>
+         <th>Description</th>
+         <th>Option</th>
+      </tr>
 
-		<tbody>
-			<tr>
-				<?php $no = 1; ?>
-				@foreach($properties as $property)
-				<td><?php echo $no++; ?></td>
-				<td>{{ $property->properties_name }}</td>
-				<td>{{ $property->type }}</td>
-				<td>{{ $property->location }}</td>
-				<td>
-					<?php $property_images = json_decode($property->image); ?>
-					<img src="{{ asset('images/blueprints/'. $property_images[0]) }}" style="border: 1px solid hotpink; width:30px; height:30px;">
-				</td>
-				<td>{{ $property->properties_description }}</td>
-				<td>{{ $property->price }}</td>
-				<td>{{ $property->notelp }}</td>
-				<td><?php echo date('d-m-y | H:i:s', strtotime($property['created_at'])); ?></td>
-				<td width=10%>
-					<a href="/update-properties/{{ $property->id }}"> <button class="btn btn-warning"><i class="fas fa-edit"></i> Edit</button></a>
-					<form action="{{ url('/properties', ['id' => $property->id]) }}" method="post">
-						@csrf
-						@method('delete')
-						<input class="btn btn-danger" type="submit" value="Delete" />
-					</form>
-				</td>
-			</tr>
-		</tbody>
-		@endforeach
+      @foreach($properties as $property)
+      <tr>
+         <td>
+            @php $property_images = json_decode($property->image); @endphp
+            <img src="{{ asset('images/blueprints/'. $property_images[0]) }}">
+         </td>
+         <td>{{ $property->properties_name }}</td>
+         <td>{{ $property->type }}</td>
+         <td>{{ $property->location }}</td>
+         <td>{{ $property->properties_description }}</td>
+         <td>
+            <div class="w-100 d-flex justify-content-end">
+               <button style="width: 100px; height: 50px;" href="/update-properties/{{ $property->id }}" class="btn btn-warning editConfirm"><i class="fas fa-edit"></i> Edit</button>
+               <form method="post" class="deleteConfirm" data-route="{{route('destroyProperties',$property->id)}}">
+                  @csrf
+                  @method('delete')
+                  <button style="width: 100px; height: 50px;" type="submit" class="btn btn-danger btn-sm">Delete</button>
+               </form>
+            </div>
+         </td>
+      </tr>
+      @endforeach
 
-	</table>
+   </table>
 
-</div> <!-- container -->
+</div>
 
 @include('controls/admins.outline.footer')

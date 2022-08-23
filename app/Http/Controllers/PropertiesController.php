@@ -17,7 +17,7 @@ class PropertiesController extends Controller
             ->with('title', $title)
             ->with(compact('properties'));
     }
-    
+
     public function indexProperties()
     {
         $title = 'Detail Properties';
@@ -56,7 +56,8 @@ class PropertiesController extends Controller
         $post->image = json_encode($imgName);
 
         $post->save();
-        return back()->withSuccess('Great! Properties has been successfully uploaded.');
+        return redirect("index-properties")
+            ->with('success', 'You have successfully created the properties.');
     }
 
     public function updateProperties($id)
@@ -90,6 +91,6 @@ class PropertiesController extends Controller
     {
         $properties = Properties::find($id);
         $properties->delete();
-        return redirect('index-properties')->with('deleteAlert', 'Great! Properties has been successfully deleted.');
+        return response('Post deleted successfully.', 200);
     }
 }
