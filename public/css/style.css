@@ -789,6 +789,19 @@ span.icon-desc-about {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  position: relative;
+}
+
+.ar-center p {
+  padding-left: 0;
+}
+
+/* @media (min-width: 576px) {
+  .ar-center {}
+} */
+
+.text-justify {
+  word-break: break-all;
 }
 
 /* End of about */
