@@ -27,6 +27,7 @@ body {
   line-height: 1.8;
   position: relative;
   margin: 0;
+  height: 100%;
 }
 
 .container-fluid,
@@ -155,7 +156,6 @@ body {
 
 .carousel-container {
   padding: 0;
-  /* against padding */
 }
 
 .top-layout,
@@ -493,7 +493,9 @@ a.overlay-hover {
 }
 
 .modal-desc-text {
-  font-size: calc(16px + 2vh);
+  font-size: calc(16px + 1vh);
+  word-break: break-word;
+  text-align: left;
 }
 
 .preview-main-img {
@@ -606,6 +608,64 @@ a.overlay-hover {
 /* End of facilities */
 
 /* Carousel */
+
+.wrap-welcome-carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.btn-welcome {
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-welcome:hover:before {
+  top: 13px;
+}
+
+.btn-welcome:before {
+  left: 0;
+  top: -100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 2.5;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-welcome span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+  -webkit-backface-visibility: hidden;
+  -moz-transition: all 0.3s;
+  -moz-backface-visibility: hidden;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+
+.tm-btn-cta {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .carousel-item {
   height: 32rem;
   background: #777;
@@ -657,7 +717,7 @@ a.overlay-hover {
 
 /* End of Footer */
 
-/* About */
+/* Contact */
 h6.contact-title {
   text-align: center;
 }
@@ -689,6 +749,46 @@ span.icon-desc-about {
   width: 100%;
   height: 500px;
   border: 0;
+}
+
+/* End of contact */
+
+/* About */
+
+.banner-area {
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZigi9L63uY8Gva-jqadjypqJXQFaWq0MYSa9VmO0aL-0FnDvJZMD0X1zdZST8_oCRXWE&usqp=CAU) no-repeat center/contain;
+  background-size: cover;
+}
+
+.banner-relative {
+  position: relative;
+}
+
+.banner-overlay {
+  background: -webkit-linear-gradient(left top, #91d1ff, #a387ff);
+  background: -o-linear-gradient(bottom right, #91d1ff, #a387ff);
+  background: -moz-linear-gradient(bottom right, #91d1ff, #a387ff);
+  background: linear-gradient(to bottom right, #91d1ff, #a387ff);
+  opacity: .9;
+}
+
+.banner-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+}
+
+.height {
+  height: 32rem;
+}
+
+.ar-center {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 /* End of about */

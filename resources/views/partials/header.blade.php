@@ -31,7 +31,7 @@
                     <li class="nav-item {{ ($title === "Properties") ? 'active' : '' }}"><a href="/#page-properties" class="nav-link">Properties</a></li>
                     <li class="nav-item {{ ($title === "Facilities") ? 'active' : '' }}"><a href="/#page-facilities" class="nav-link">Facilities</a></li>
                     <li class="nav-item {{ ($title === "Contact Us") ? 'active' : '' }}"><a href="contact-us" class="nav-link">Contact</a></li>
-                    <li class="nav-item {{ ($title === "About Us") ? 'active' : '' }}"><a href="about-us" class="nav-link">About Us</a></li>
+                    <li class="nav-item {{ ($title === "About") ? 'active' : '' }}"><a href="about-us" class="nav-link">About</a></li>
                 </ul>
             </div>
         </nav>
