@@ -1,31 +1,21 @@
 <header id="header-container" class="ftco-section rounded">
 
-    <div class="container">
-        <div class="container-fluid px-md-5">
-            <div class="row justify-content-between">
-                <div class="col-md-8 order-md-last">
-                    <div class="col-md-6 text-center d-flex justify-content-center">
-                        <a class="navbar-brand" href="/">PT. BUMI REJEKI AGUNG <span>Properties Agency</span></a>
-                    </div>
-                    <div class="col-md-6 text-center">
-                        <div class="logo d-flex justify-content-center">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="logo d-flex justify-content-center">
-                        <a href="/"><img src="images/logo/le-casa-bonita.png" href="/" class="logo-control"></a>
-                    </div>
-                </div>
-            </div>
+    <div class="d-flex justify-content-center text-center">
+        <div class="navbar-brand" href="/">PT. BUMI REJEKI AGUNG
+            <span>Properties Agency</span>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light ftco_navbar ftco-navbar-light" id="ftco-navbar">
-            <button class="navbar-toggler ml-auto hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+    </div>
+    <nav class="d-flex justify-content-around navbar navbar-expand-lg navbar-light ftco-navbar-light" id="ftco-navbar">
+        <div class="d-flex justify-content-around nav-wrap-m">
+            <div class="logo-wrap d-flex " href="/">
+                <img src="images/logo/le-casa-bonita.png" alt="logo">
+            </div>
+            <button class="navbar-toggler hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fa fa-bars fa-2x"></span>
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav m-auto">
-                    <a class="close-navbar-collapse d-lg-none" data-toggle="collapse" data-target="#ftco-nav, #site-main" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-times justify-content-center" aria-hidden="true"></i>
+                <ul class="navbar-nav">
+                    <a class="close-navbar-collapse d-lg-none" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-times justify-content-center" aria-hidden="true"></i>
                     </a>
                     <li class="nav-item {{ ($title === "Home") ? 'active' : '' }}"><a href="/" class="nav-link">Home</a></li>
                     <li class="nav-item {{ ($title === "Properties") ? 'active' : '' }}"><a href="/#page-properties" class="nav-link">Properties</a></li>
@@ -34,7 +24,7 @@
                     <li class="nav-item {{ ($title === "About") ? 'active' : '' }}"><a href="about-us" class="nav-link">About</a></li>
                 </ul>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
 </header>
