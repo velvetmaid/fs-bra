@@ -1,5 +1,4 @@
 @foreach($properties as $property)
-
 <div id="myModal{{ $property->id }}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content modal-bg">
@@ -16,9 +15,9 @@
                                 $property_images = json_decode($property->image);
                                 @endphp
                                 <div class="container">
-                                    <div class="fotorama" data-logo="true" data-allowfullscreen="true" data-autoplay="true" data-nav="thumbs" data-thumbwidth="110.5" data-thumbheight="66" data-thumbmargin="10" data-thumbborderwidth="4" data-width="850" data-height="550">
+                                    <div class="fotorama" data-logo="true" data-allowfullscreen="true" data-autoplay="true" data-nav="thumbs" data-thumbwidth="110.5" data-thumbheight="65" data-thumbmargin="10" data-thumbborderwidth="4" data-width="850" data-height="550">
                                         @foreach ($property_images as $img)
-                                        <img src="{{ asset('images/blueprints/'. $img) }}" alt="{{ $property->image }}" class="" width="144" height="96">
+                                        <img src="{{ asset('images/blueprints/'. $img) }}" alt="{{ $property->image }}" width="144" height="96">
                                         @endforeach
                                     </div>
                                 </div>
@@ -30,17 +29,18 @@
                                 <div class="row top-0 ">
                                     <div class="col-sm-12 my-auto top-3 h-100 d-inline-block">
                                         <div class="col-sm-12 card-block mx-auto text-center">
-                                            <h1 class="modal-desc-text">{{ $property->properties_name }}</h1>
+                                            <h1 class="modal-desc-text">{{ $property->properties_description }}</h1>
                                         </div>
                                         <div class="col-sm-12 card-block mx-auto text-center">
-                                            <h1 class="modal-desc-text">{{ $property->properties_description }}</h1>
+                                            <h1 class="modal-desc-text">{{ $property->location }}</h1>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="container-fluid spacing-bottom">
-                                <button type="button" class="btn btn-tertiary btn-lg btn-block text-center">
-                                    <i class="fa-brands fa-whatsapp"></i>Hubungi</button>
+                                <a href="https://api.whatsapp.com/send?phone={{ $property->notelp }}" target="_blank" rel="noopener noreferrer" type="button" class="btn btn-tertiary btn-lg btn-block text-center">
+                                    <i class="fa-brands fa-whatsapp">
+                                    </i>Hubungi</a>
                             </div>
                         </div>
                     </div>
@@ -49,5 +49,4 @@
         </div>
     </div>
 </div>
-
 @endforeach
