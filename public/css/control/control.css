@@ -65,12 +65,16 @@ table tr:nth-child(2n+1) {
   background-color: #edf7f8;
 }
 
+tr {
+  border: 1px solid #91ced4;
+}
+
 @media screen and (max-width: 700px) {
 
   table,
   tr,
   td {
-    display: block;
+    display: inline-block;
   }
 
   td:first-child {
@@ -101,7 +105,7 @@ table tr:nth-child(2n+1) {
   }
 
   td:nth-child(3):before {
-    content: "Email:";
+    content: "Location:";
   }
 
   td:nth-child(4):before {
@@ -109,7 +113,7 @@ table tr:nth-child(2n+1) {
   }
 
   td:nth-child(5):before {
-    content: "Comments:";
+    content: "Harga:";
   }
 
   tr {
