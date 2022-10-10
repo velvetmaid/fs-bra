@@ -557,37 +557,21 @@ a.overlay-hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  z-index: 500;
+  z-index: 100;
 }
 
-.btn-welcome {
-  position: relative;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.btn-welcome:hover:before {
-  top: 13px;
-}
-
-.btn-welcome:before {
-  left: 0;
-  top: -100%;
-  position: absolute;
-  height: 100%;
+.welcome-carousel-inner {
+  max-width: 650px;
   width: 100%;
-  line-height: 2.5;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-weight: 900;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.welcome-carousel-inner span {
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .btn-welcome span {
@@ -615,8 +599,9 @@ a.overlay-hover {
 }
 
 .carousel-indicators {
-  justify-content: start;
   z-index: 600;
+  justify-content: start;
+  margin: 0;
 }
 
 .carousel-indicators li {
