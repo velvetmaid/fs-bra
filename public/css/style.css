@@ -560,15 +560,6 @@ a.overlay-hover {
   z-index: 100;
 }
 
-.welcome-carousel-inner {
-  max-width: 650px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
 .welcome-carousel-inner span {
   font-size: 36px;
   font-weight: bold;
@@ -601,7 +592,6 @@ a.overlay-hover {
 .carousel-indicators {
   z-index: 600;
   justify-content: start;
-  margin: 0;
 }
 
 .carousel-indicators li {
@@ -730,7 +720,6 @@ span.icon-desc-about {
 
 .feature-bottom-area {
   padding-bottom: 100px;
-  background-color: #dcc7b7;
 }
 
 /* Footer */
@@ -739,7 +728,6 @@ span.icon-desc-about {
   color: white;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  margin-right: 2.5em;
 }
 
 .second li {
@@ -761,6 +749,13 @@ span.icon-desc-about {
   transition: 0.2s;
   text-shadow: 1px 1px 20px rgba(0, 0, 0, 1);
   text-decoration: none
+}
+
+.li-find-us {
+  margin-bottom: 1rem!important;
+  justify-content: start;
+  display: flex;
+  padding-left: 20px;
 }
 
 /* End of Footer */
