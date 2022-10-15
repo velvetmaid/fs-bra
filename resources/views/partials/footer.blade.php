@@ -51,13 +51,13 @@
         <h5 class="text-uppercase mb-4">Find US</h5>
 
         <ul class="fa-ul" style="margin-left: 2em;">
-          <li class="mb-3">
+          <li class="li-find-us mb-3">
             <span class="fa-li"><i class="fas fa-location-arrow"></i></span><span class="ms-2">CITRA RAYA BLOK M. 3/08. City: Banten.</span>
           </li>
-          <li class="mb-3">
+          <li class="li-find-us mb-3">
             <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">bumirejekiagung@gmail.com</span>
           </li>
-          <li class="mb-3">
+          <li class="li-find-us mb-3">
             <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 62 234 567 88</span>
           </li>
         </ul>
@@ -72,7 +72,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     <a class="text-white" href="#">
-      <p class="text-right">Copyright &copy; <script>
+      <p class="text-center">Copyright &copy; <script>
           document.write(new Date().getFullYear())
         </script> Le Casa Bonita All Rights Reserved</p>
     </a>
