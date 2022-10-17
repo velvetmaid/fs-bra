@@ -39,7 +39,7 @@ class PropertiesController extends Controller
             'price' => 'required',
             'notelp' => 'required',
         ]);
-
+        
         $imgName = [];
         foreach ($request->file('image') as $img) {
             $filename = $img->getClientOriginalName();
@@ -90,7 +90,7 @@ class PropertiesController extends Controller
     public function destroyProperties($id)
     {
         $properties = Properties::find($id);
-        $properties->delete();
+        $properties->delete();  
         return response('Post deleted successfully.', 200);
     }
 }

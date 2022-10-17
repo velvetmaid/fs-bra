@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StorePropertiesRequest;
 use App\Http\Resources\PropertiesResource;
 use App\Models\Properties;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class PropertiesController extends Controller
 {
@@ -18,7 +19,7 @@ class PropertiesController extends Controller
     public function index()
     {
         $properties = Properties::all();
-        return PropertiesResource::collection($properties);
+        return new PropertiesResource(true, 'List data table properties', $properties);
     }
 
     /**
@@ -39,8 +40,41 @@ class PropertiesController extends Controller
      */
     public function store(Request $request)
     {
-        $properties = Properties::create($request->all());
-        return new PropertiesResource($properties);
+        /*         $properties = Properties::create($request->all());
+        return new PropertiesResource($properties, 'Data has been added!'); */
+        $validator = Validator::make($request->all(), [
+            'properties_name' => 'required',
+            'type' => 'required',
+            'location' => 'required',
+            'image' => 'required|array',
+            'image.*' => 'required|image|mimes:jpg,jpeg,png,gif|max:10240',
+            'properties_description' => 'required',
+            'price' => 'required',
+            'notelp' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return new PropertiesResource(false, 'Data gagal ditambahkan!', null);
+        }
+
+        $imgName = [];
+        foreach ($request->file('image') as $img) {
+            $filename = $img->getClientOriginalName();
+            $img->move(public_path() . '/images/blueprints', $filename);
+            $imgName[] = $filename;
+        }
+
+        $post = new Properties;
+        $post->properties_name = $request->properties_name;
+        $post->type = $request->type;
+        $post->location = $request->location;
+        $post->properties_description = $request->properties_description;
+        $post->price = $request->price;
+        $post->notelp = $request->notelp;
+        $post->image = json_encode($imgName);
+
+        $post->save();
+        return new PropertiesResource(true, 'Data ditambahkan.', $post);
     }
 
     /**
@@ -49,9 +83,15 @@ class PropertiesController extends Controller
      * @param  \App\Models\Properties  $properties
      * @return \Illuminate\Http\Response
      */
-    public function show(Properties $properties)
+    public function show($id)
     {
-        //
+        $properties = Properties::whereId($id)->first();
+
+        if ($properties) {
+            return new PropertiesResource(true, 'Data properties dengan id ;', $properties);
+        } else {
+            return new PropertiesResource(false, 'Data tidak ditemukan!', $properties);
+        }
     }
 
     /**
@@ -72,11 +112,53 @@ class PropertiesController extends Controller
      * @param  \App\Models\Properties  $properties
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Properties $properties)
+    public function update(Request $request, Properties $properties, $id)
     {
-        $properties->update($request->all());
+        $validator = Validator::make($request->all(), [
+            'properties_name' => 'required',
+            'type' => 'required',
+            'location' => 'required',
+            'image' => 'required|array',
+            'image.*' => 'required|image|mimes:jpg,jpeg,png,gif|max:10240',
+            'properties_description' => 'required',
+            'price' => 'required',
+            'notelp' => 'required',
+        ]);
 
-        return new PropertiesResource($properties);
+        if ($validator->fails()) {
+            return new PropertiesResource(false, 'Data gagal diubah!', null);
+        }
+
+        $properties = Properties::find($id);
+        if ($request->hasFile('image')) {
+
+            if ($oldImg = json_decode($properties->image)) {
+                // $oldImg = str_replace(array('&amp;quot;', '', $oldImg))
+                $j = count($oldImg);
+                for ($i = 0; $i < $j; $i++) {
+                    unlink(public_path('/images/blueprints/' . $oldImg[$i]));
+                }
+                // $path = public_path('/images/blueprints/') . $oldImg;
+                $properties->delete();
+            }
+            $imgName = [];
+            foreach ($request->file('image') as $img) {
+                $filename = $img->getClientOriginalName();
+                $img->move(public_path() . '/images/blueprints', $filename);
+                $imgName[] = $filename;
+            }
+        }
+
+        $properties->properties_name = $request->properties_name;
+        $properties->type = $request->type;
+        $properties->location = $request->location;
+        $properties->properties_description = $request->properties_description;
+        $properties->price = $request->price;
+        $properties->notelp = $request->notelp;
+        $properties->image = json_encode($imgName);
+
+        $properties->save();
+        return new PropertiesResource(true, 'Data berhasil diubah.', $properties);
     }
 
     /**
@@ -85,10 +167,15 @@ class PropertiesController extends Controller
      * @param  \App\Models\Properties  $properties
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Properties $properties)
+    public function destroy(Properties $properties, $id)
     {
+        $properties = Properties::find($id);
+        $image = json_decode($properties->image);
+        $length = count($image);
+        for ($i = 0; $i < $length; $i++) {
+            unlink(public_path('/images/blueprints/' . $image[$i]));
+        }
         $properties->delete();
-
-        return response(null, 204);
+        return new PropertiesResource(true, 'Data berhasil dihapus.', null);
     }
 }

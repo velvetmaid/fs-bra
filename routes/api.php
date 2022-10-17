@@ -20,4 +20,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::apiResource('properties', PropertiesController::class);
+Route::apiResource('/properties', PropertiesController::class);
+/* Route::apiResource('properties/{id}', PropertiesController::class, 'destroy');
+ */
+// Route::delete('/properties/{id}', [PropertiesController::class, 'destroyProperties'])->name('destroyProperties');
+
+/* Route::delete('/properties/{id}', [PropertiesController::class, 'destroyProperties']);
+ */
