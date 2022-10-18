@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\PropertiesController;
+use App\Http\Controllers\Api\ReservationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::apiResource('/properties', PropertiesController::class);
+Route::apiResource('/reservation', ReservationController::class);
 /* Route::apiResource('properties/{id}', PropertiesController::class, 'destroy');
  */
 // Route::delete('/properties/{id}', [PropertiesController::class, 'destroyProperties'])->name('destroyProperties');
