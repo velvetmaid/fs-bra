@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('model');
             $table->string('type');
             $table->string('email');
-            $table->bigInteger('notelp');
+            $table->string('notelp');
             $table->timestamps();
         });
     }

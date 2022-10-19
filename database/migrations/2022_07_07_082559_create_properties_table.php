@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('image')->nullable();
             $table->string('properties_description');
             $table->string('price');
-            $table->bigInteger('notelp');
+            $table->string('notelp');
             $table->timestamps();
         });
     }
