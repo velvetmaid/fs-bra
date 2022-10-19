@@ -752,10 +752,25 @@ span.icon-desc-about {
 }
 
 .li-find-us {
-  margin-bottom: 1rem!important;
+  margin-bottom: 1rem !important;
   justify-content: start;
   display: flex;
   padding-left: 20px;
 }
 
 /* End of Footer */
+
+/* Button Reservasi */
+.reservasi {
+  font-family: BarlowCondensed;
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+#reservasiBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
