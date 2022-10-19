@@ -15,10 +15,12 @@
                 <input type="text" class="form-control" id="type" name="type" placeholder="Tuliskan nama Produk" required>
             </div>
         </div>
-
-        <div class="form-group col-12">
-            <label for="location" class="form-label">Location</label>
-            <input type="text" class="form-control" id="location" name="location" placeholder="Tuliskan nama Produk">
+        
+        <div class="form-row">
+            <div class="form-group col-12">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" name="location" placeholder="Tuliskan nama Produk">
+            </div>
         </div>
 
         <div class="form-row">

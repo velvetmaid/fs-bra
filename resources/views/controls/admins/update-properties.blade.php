@@ -16,9 +16,11 @@
             </div>
         </div>
 
-        <div class="form-group col-12">
-            <label for="location" class="form-label">Location</label>
-            <input type="text" class="form-control" id="location" name="location" value="{{ $properties->location }}" required>
+        <div class="form-row">
+            <div class="form-group col-12">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" name="location" value="{{ $properties->location }}" required>
+            </div>
         </div>
 
         <div class="form-row">
@@ -33,18 +35,18 @@
             </div>
         </div>
 
-            <div class="form-row">
-                <div class="form-group col-6">
-                    <label for="price" class="form-label">Price</label>
-                    <input type="number" class="form-control" id="price" name="price" value="{{ $properties->price }}" required>
-                </div>
-
-                <div class="form-group col-6">
-                    <label for="notelp" class="form-label">No. Telp</label>
-                    <input type="number" class="form-control" id="notelp" name="notelp" value="{{ $properties->notelp }}" placeholder="No. Telp yang dapat di hubungi">
-                </div>
+        <div class="form-row">
+            <div class="form-group col-6">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" class="form-control" id="price" name="price" value="{{ $properties->price }}" required>
             </div>
-            <button type="submit" class="btn btn-primary" onclick="saveConfirm('sc')">Simpan</button>
+
+            <div class="form-group col-6">
+                <label for="notelp" class="form-label">No. Telp</label>
+                <input type="number" class="form-control" id="notelp" name="notelp" value="{{ $properties->notelp }}" placeholder="No. Telp yang dapat di hubungi">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="saveConfirm('sc')">Simpan</button>
     </form>
 </div>
 
