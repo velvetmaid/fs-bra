@@ -1,7 +1,7 @@
 @include('controls/admins.outline.header')
 
 <div class="container mt-5">
-    <h1>Tambah Produk</h1>
+    <h2><b>Add Properties</b></h2>
     <form action="/add-properties" method="POST" enctype="multipart/form-data" class="form">
         @csrf
         <div class="form-row">
@@ -9,17 +9,16 @@
                 <label for="properties_name" class="form-label">Properties Name</label>
                 <input type="text" class="form-control" id="properties_name" name="properties_name" placeholder="Tuliskan nama Produk" required>
             </div>
-
             <div class="form-group col-6">
-                <label for="type" class="form-label">Type Home</label>
-                <input type="text" class="form-control" id="type" name="type" placeholder="Tuliskan nama Produk" required>
+                <label for="model" class="form-label">Home Model</label>
+                <input type="text" class="form-control" id="model" name="model" placeholder="Tuliskan nama Produk">
             </div>
         </div>
-        
+
         <div class="form-row">
             <div class="form-group col-12">
-                <label for="location" class="form-label">Location</label>
-                <input type="text" class="form-control" id="location" name="location" placeholder="Tuliskan nama Produk">
+                <label for="type" class="form-label">Home Type</label>
+                <input type="text" class="form-control" id="type" name="type" placeholder="Tuliskan nama Produk" required>
             </div>
         </div>
 

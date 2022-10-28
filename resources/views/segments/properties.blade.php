@@ -27,7 +27,7 @@
                             <p>{{ $property->properties_name }}</h2>
                                 <h2>{{ $property->type }}
                             </p>
-                            <p>{{ $property->location }}</p>
+                            <p>{{ $property->model }}</p>
                         </a>
                     </div>
                 </div>

@@ -32,7 +32,7 @@ class PropertiesController extends Controller
         $validated = $request->validate([
             'properties_name' => 'required',
             'type' => 'required',
-            'location' => 'required',
+            'model' => 'required',
             'image' => 'required|array',
             'image.*' => 'required|image|mimes:jpg,jpeg,png,gif|max:10240',
             'properties_description' => 'required',
@@ -49,7 +49,7 @@ class PropertiesController extends Controller
         $post = new Properties;
         $post->properties_name = $request->properties_name;
         $post->type = $request->type;
-        $post->location = $request->location;
+        $post->model = $request->model;
         $post->properties_description = $request->properties_description;
         $post->price = $request->price;
         $post->notelp = $request->notelp;
@@ -77,7 +77,7 @@ class PropertiesController extends Controller
         }
         $properties->properties_name = $request->properties_name;
         $properties->type = $request->type;
-        $properties->location = $request->location;
+        $properties->model = $request->model;
         $properties->properties_description = $request->properties_description;
         $properties->price = $request->price;
         $properties->notelp = $request->notelp;

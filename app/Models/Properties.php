@@ -13,7 +13,7 @@ class Properties extends Model
     protected $fillable = [
         'properties_name',
         'type',
-        'location',
+        'model',
         'image',
         'properties_description',
         'price',

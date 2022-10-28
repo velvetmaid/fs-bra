@@ -32,7 +32,7 @@
                                             <h1 class="modal-desc-text">{{ $property->properties_description }}</h1>
                                         </div>
                                         <div class="col-sm-12 card-block mx-auto text-center">
-                                            <h1 class="modal-desc-text">{{ $property->location }}</h1>
+                                            <h1 class="modal-desc-text">{{ $property->model }}</h1>
                                         </div>
                                     </div>
                                 </div>
