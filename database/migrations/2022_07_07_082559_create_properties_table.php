@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
             $table->string('properties_name');
+            $table->string('model');
             $table->string('type');
-            $table->string('location');
             $table->text('image')->nullable();
             $table->string('properties_description');
             $table->string('price');
