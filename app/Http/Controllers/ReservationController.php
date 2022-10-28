@@ -45,9 +45,8 @@ class ReservationController extends Controller
         ]);
 
         Reservation::create($request->all());
-
         return redirect("/")
-            ->with('success', 'You have successfully created the properties.');
+            ->with('success', 'Pesan anda sudah terkirim, tunggu hingga admin menghubungi kamu.');
     }
 
     /**

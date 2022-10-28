@@ -18,8 +18,8 @@ class PropertiesController extends Controller
      */
     public function index()
     {
-        $properties = Properties::all();
-        return new PropertiesResource(true, 'List data table properties', $properties);
+        $data = Properties::all();
+        return new PropertiesResource(true, 'Seluruh data properties', $data);
     }
 
     /**
@@ -40,12 +40,10 @@ class PropertiesController extends Controller
      */
     public function store(Request $request)
     {
-        /*         $properties = Properties::create($request->all());
-        return new PropertiesResource($properties, 'Data has been added!'); */
         $validator = Validator::make($request->all(), [
             'properties_name' => 'required',
             'type' => 'required',
-            'location' => 'required',
+            'model' => 'required',
             'image' => 'required|array',
             'image.*' => 'required|image|mimes:jpg,jpeg,png,gif|max:10240',
             'properties_description' => 'required',
@@ -67,14 +65,14 @@ class PropertiesController extends Controller
         $post = new Properties;
         $post->properties_name = $request->properties_name;
         $post->type = $request->type;
-        $post->location = $request->location;
+        $post->model = $request->model;
         $post->properties_description = $request->properties_description;
         $post->price = $request->price;
         $post->notelp = $request->notelp;
         $post->image = json_encode($imgName);
 
         $post->save();
-        return new PropertiesResource(true, 'Data ditambahkan.', $post);
+        return new PropertiesResource(true, 'Data berhasil ditambahkan.', $post);
     }
 
     /**
@@ -117,7 +115,7 @@ class PropertiesController extends Controller
         $validator = Validator::make($request->all(), [
             'properties_name' => 'required',
             'type' => 'required',
-            'location' => 'required',
+            'model' => 'required',
             'image' => 'required|array',
             'image.*' => 'required|image|mimes:jpg,jpeg,png,gif|max:10240',
             'properties_description' => 'required',
@@ -133,12 +131,10 @@ class PropertiesController extends Controller
         if ($request->hasFile('image')) {
 
             if ($oldImg = json_decode($properties->image)) {
-                // $oldImg = str_replace(array('&amp;quot;', '', $oldImg))
                 $j = count($oldImg);
                 for ($i = 0; $i < $j; $i++) {
                     unlink(public_path('/images/blueprints/' . $oldImg[$i]));
                 }
-                // $path = public_path('/images/blueprints/') . $oldImg;
                 $properties->delete();
             }
             $imgName = [];
@@ -151,7 +147,7 @@ class PropertiesController extends Controller
 
         $properties->properties_name = $request->properties_name;
         $properties->type = $request->type;
-        $properties->location = $request->location;
+        $properties->model = $request->model;
         $properties->properties_description = $request->properties_description;
         $properties->price = $request->price;
         $properties->notelp = $request->notelp;

@@ -42,7 +42,7 @@ $(document).ready(function () {
         Swal.fire({
             icon: 'warning',
             iconColor: '#d33',
-            title: 'Are you sure you want to delete this record?',
+            title: 'Apakah anda yakin ingin menghapus data?',
             showDenyButton: false,
             showCancelButton: true,
             confirmButtonText: 'Yes'
@@ -64,7 +64,8 @@ $(document).ready(function () {
                             title: response,
                             showDenyButton: false,
                             showCancelButton: false,
-                            confirmButtonText: 'Yes'
+                            confirmButtonText: 'Yes',
+                            timer: 1500
                         }).then((result) => {
                             window.location = '/index-properties'
                         });
