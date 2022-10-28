@@ -4,7 +4,7 @@ use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertiesController;
-use Illuminate\Queue\Console\RetryCommand;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -75,3 +75,5 @@ Route::delete('/properties/{id}', [PropertiesController::class, 'destroyProperti
 Route::resource('/reservation', ReservationController::class);
 Route::post('captcha-validation', [ReservationController::class, 'capthcaFormValidate']);
 Route::get('reload-captcha', [ReservationController::class, 'reloadCaptcha']);
+
+Route::resource('about', AboutController::class);
