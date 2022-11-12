@@ -1,6 +1,10 @@
 @include('controls/admins.outline.header')
 
-<div class="container mt-5">
+<div class="container pt-3">
+    <div class="container d-flex justify-content-center">
+        <a type="button" class="btn btn-info btn-dashboard" href="{{ url('index-properties') }}">Back</a>
+    </div>
+    
     <h2><b>Add Properties</b></h2>
     <form action="/add-properties" method="POST" enctype="multipart/form-data" class="form">
         @csrf

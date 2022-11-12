@@ -8,27 +8,27 @@
       <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
         <h5 class="text-uppercase mb-4">About company</h5>
 
+        @foreach ($about as $indexAbout)
         <p>
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-          voluptatum deleniti atque corrupti.
+          {{ $indexAbout->visi }}
         </p>
 
         <p>
-          Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-          molestias.
+          {{ $indexAbout->misi }}
         </p>
 
         <div class="mt-4" style="padding-bottom: 1em ;">
           <!-- Facebook -->
-          <a type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-facebook-f"></i></a>
+          <a href="{{ $indexAbout->facebook }}" type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-facebook-f"></i></a>
           <!-- Tiktok -->
-          <a type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-tiktok"></i></a>
+          <a href="{{ $indexAbout->facebook }}" type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-tiktok"></i></a>
           <!-- Twitter -->
-          <a type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-twitter"></i></a>
+          <a href="{{ $indexAbout->instagram }}" type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-twitter"></i></a>
           <!-- Instagram -->
-          <a type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-instagram"></i></a>
+          <a href="{{ $indexAbout->instagram }}" type="button" class="btn btn-floating btn-secondary btn-lg"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
+      @endforeach
       <!--Grid column-->
 
       <!--Grid column-->
@@ -48,19 +48,21 @@
 
       <!--Grid column-->
       <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-        <h5 class="text-uppercase mb-4">Find US</h5>
+        <h5 class="text-uppercase mb-4">Find Us</h5>
 
+        @foreach ($contact as $indexContact)
         <ul class="fa-ul" style="margin-left: 2em;">
           <li class="li-find-us mb-3">
-            <span class="fa-li"><i class="fas fa-location-arrow"></i></span><span class="ms-2">CITRA RAYA BLOK M. 3/08. City: Banten.</span>
+            <span class="fa-li"><i class="fas fa-location-arrow"></i></span><span class="ms-2">{{ $indexContact->location }}</span>
+          </li>
+          <li class=" li-find-us mb-3">
+            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">{{ $indexContact->email }}</span>
           </li>
           <li class="li-find-us mb-3">
-            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">bumirejekiagung@gmail.com</span>
-          </li>
-          <li class="li-find-us mb-3">
-            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 62 234 567 88</span>
+            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">{{ $indexContact->no_hp }}</span>
           </li>
         </ul>
+        @endforeach
 
       </div>
       <!--Grid column-->

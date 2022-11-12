@@ -1,6 +1,10 @@
 @include('controls/admins.outline.header')
 
-<div class="container mt-5">
+<div class="container pt-3">
+    <div class="container d-flex justify-content-center">
+        <a type="button" class="btn btn-info btn-dashboard" href="{{ url('about') }}">Back</a>
+    </div>
+
     <h1>Update About</h1>
     <form id="sc" action="{{ route('about.update',$about->id) }}" method="POST" enctype="multipart/form-data">
         @csrf

@@ -12,12 +12,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="css/control/control.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="container">
+    <!-- <div class="container">
         <nav class="navbar navbar-expand-lg">
             <b>{{ Auth::user()->name }}</b><br>
             <a class="navbar-brand" href="#"></a>
@@ -29,9 +32,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/index-properties">Home</a>
                     </li>
-                    <!--                     <li class="nav-item">
-                        <a class="nav-link" href="akun_admin.php">Akun Admin</a>
-                    </li> -->
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
@@ -41,7 +41,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Slideshow</a></li>
-                            <li><a class="dropdown-item" href="{{ route('about.index') }}">About</a></li>
+                            <li><a class="dropdown-item" >About</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -53,4 +53,4 @@
                 </ul>
             </div>
         </nav>
-    </div>
+    </div> -->

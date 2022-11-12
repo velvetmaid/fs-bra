@@ -1,6 +1,10 @@
 @include('controls/admins.outline.header')
 
-<div class="container mt-5">
+<div class="container pt-3">
+    <div class="container d-flex justify-content-center">
+        <a type="button" class="btn btn-info btn-dashboard" href="{{ url('index-properties') }}">Back</a>
+    </div>
+
     <h1>Update Produk</h1>
     <form id="sc" action="/update-data-properties/{{ $properties->id }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -51,7 +55,7 @@
 </div>
 
 <script>
-   /*  function updateConfirm() {
+    /*  function updateConfirm() {
         Swal.fire({
             title: "Are you sure you want to reset your game?",
             text: "You will not be able to recover your game!",
