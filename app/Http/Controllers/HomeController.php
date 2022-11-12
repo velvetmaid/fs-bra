@@ -32,20 +32,18 @@ class HomeController extends Controller
             return view('controls.operator.accounts');
         }
         if ($role == 'admin') {
-            $title = 'Detail Properties';
-            $properties = Properties::all();
-            return View('controls.admins.index-properties')
-                ->with('title', $title)
-                ->with(compact('properties'));
+            $title = 'Dashboard';
+            return View('controls.admins.dashboard')
+                ->with('title', $title);
         }
     }
 
-    public function accounts()
+    /* public function accounts()
     {
         $title = 'Home';
         $properties = Properties::all();
         return View('index')
             ->with('title', $title)
             ->with(compact('properties'));
-    }
+    } */
 }

@@ -26,7 +26,7 @@ class StorePropertiesRequest extends FormRequest
         return [
             'properties' => ['required'],
             'type' => ['required'],
-            'location' => ['required'],
+            'model' => ['required'],
             'image' => ['required'],
             'properties_description' => ['required'],
             'price' => ['required'],

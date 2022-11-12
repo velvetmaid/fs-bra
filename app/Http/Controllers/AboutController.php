@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\View;
 
 class AboutController extends Controller
 {
@@ -19,6 +21,15 @@ class AboutController extends Controller
         return view('controls.admins.index-about', compact('about'));
     }
 
+    public function indexAbout()
+    {
+        $title = 'About Us';
+        $contact = Contact::all();
+        $about = About::all();
+        return View::make('about-us')
+            ->with('title', $title)
+            ->with(compact('about', 'contact'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -56,8 +67,7 @@ class AboutController extends Controller
             }
             About::create($input);
 
-            return redirect()->route('about.index')
-                ->with('success', 'Product created successfully.');
+            return View('controls.admins.index-about', compact('about'));
         }
     }
 
@@ -116,7 +126,7 @@ class AboutController extends Controller
                 $newImageName   = $request->banner;
             } */
 
-   /*          if ($request->hasFile('banenr')) {
+            /*          if ($request->hasFile('banenr')) {
                 $img
             }
  */
@@ -128,6 +138,7 @@ class AboutController extends Controller
             $about->misi = $request->misi;
             $about->banner = $newImageName;
             $about->save();
+            return redirect('about')->with('success', 'Great! About has been successfully uptodate.');
 
 
             /*      if ($validator->fails()) {

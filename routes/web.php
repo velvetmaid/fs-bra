@@ -1,11 +1,13 @@
 <?php
 
-use App\Http\Controllers\ReservationController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PropertiesController;
-use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\SlideshowController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +39,14 @@ Route::get('/about-us', function () {
 
 
 /* Control Page */
+
+Route::get('/dashboard', function () {
+    return view('controls.admins.dashboard', [
+        "title" => "Dashboard"
+    ]);
+});
+
+
 Route::get('/index-accounts', function () {
     return view('controls.operator.accounts', [
         "title" => "Index Accounts"
@@ -73,7 +83,11 @@ Route::post('/update-data-properties/{id}', [PropertiesController::class, 'updat
 Route::delete('/properties/{id}', [PropertiesController::class, 'destroyProperties'])->name('destroyProperties');
 
 Route::resource('/reservation', ReservationController::class);
-Route::post('captcha-validation', [ReservationController::class, 'capthcaFormValidate']);
+Route::post('captcha-validation', [ReservationController::class, 'store']);
 Route::get('reload-captcha', [ReservationController::class, 'reloadCaptcha']);
 
 Route::resource('about', AboutController::class);
+Route::resource('contact', ContactController::class);
+Route::get('/about-us', [AboutController::class, 'indexAbout'])->name('indexAbout');
+Route::get('/contact-us', [ContactController::class, 'indexContact'])->name('indexContact');
+Route::resource('slideshow', SlideshowController::class);

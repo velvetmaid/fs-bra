@@ -39,9 +39,9 @@ class ReservationController extends Controller
             'reservation_name' => 'required',
             'model' => 'required',
             'type' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'notelp' => 'required',
-            'captcha' => 'required|captcha',
+            'captcha' => 'required|captcha'
         ]);
 
         Reservation::create($request->all());
@@ -49,6 +49,10 @@ class ReservationController extends Controller
             ->with('success', 'Pesan anda sudah terkirim, tunggu hingga admin menghubungi kamu.');
     }
 
+    public function reloadCaptcha()
+    {
+        return response()->json(['captcha' => captcha_img()]);
+    }
     /**
      * Display the specified resource.
      *

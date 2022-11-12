@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Contact;
 use App\Models\Properties;
+use App\Models\Slideshow;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
@@ -13,10 +16,15 @@ class PropertiesController extends Controller
     {
         $title = 'Home';
         $properties = Properties::all();
+        $about = About::all();
+        $contact = Contact::all();
+        $slideshow = Slideshow::all();
         return View::make('index')
             ->with('title', $title)
-            ->with(compact('properties'));
+            ->with(compact('properties', 'slideshow', 'about', 'contact'));
     }
+
+
 
     public function indexProperties()
     {
@@ -29,7 +37,8 @@ class PropertiesController extends Controller
 
     public function addProperties(Request $request)
     {
-        $validated = $request->validate([
+        /* $validated =  */
+        $request->validate([
             'properties_name' => 'required',
             'type' => 'required',
             'model' => 'required',
@@ -39,7 +48,7 @@ class PropertiesController extends Controller
             'price' => 'required',
             'notelp' => 'required',
         ]);
-        
+
         $imgName = [];
         foreach ($request->file('image') as $img) {
             $filename = $img->getClientOriginalName();
@@ -90,7 +99,7 @@ class PropertiesController extends Controller
     public function destroyProperties($id)
     {
         $properties = Properties::find($id);
-        $properties->delete();  
+        $properties->delete();
         return response('Post deleted successfully.', 200);
     }
 }
